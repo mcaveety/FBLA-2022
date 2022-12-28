@@ -1,6 +1,8 @@
 # FBLA-2022
+
 Submission for the FBLA 2022-23 Coding and Programming Competition.
 
+***
 
 Develop a program which will help improve student involvement at your school. This original computer program will track student participation and attendance at school events. Once students participate or attend events, they are awarded points. You must have a way to pick a random winner each quarter from each grade level, as well as the student with the top point accumulation. The number of points a person has accumulated will translate to the prize they win. You will need to have at least three prizes (a school reward, a food reward, and a school spirit item).
 - Assign a point value for participating in or attending events
