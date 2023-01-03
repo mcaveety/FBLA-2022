@@ -8,11 +8,12 @@
 {% block content %}
 
 <p>Login</p>
+
 <form method="post">
-    <input id="first_name" type="text" placeholder="First Name">
-    <input id="last_name" type="text" placeholder="Last Name">
-    <input id="student_number" type="text" placeholder="Student Number">
-    <select id="grade_level">
+    <input id="first_name" name="first_name" type="text" placeholder="First Name">
+    <input id="last_name" name="last_name" type="text" placeholder="Last Name">
+    <input id="student_number" name="student_number" type="text" placeholder="Student Number">
+    <select id="grade_level" name="grade_level">
         <option value="9">Freshman (9th grade)</option>
         <option value="10">Sophomore (10th grade)</option>
         <option value="11">Junior (11th grade)</option>
@@ -20,4 +21,5 @@
     </select>
     <input type="submit" value="Sign Up">
 </form>
+
 {% endblock %}
