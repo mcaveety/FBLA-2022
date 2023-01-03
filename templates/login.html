@@ -1,0 +1,23 @@
+<!-- Connects login.html to base.html -->
+{% extends "base.html" %}
+
+<!-- Changes page title -->
+{% block title %}Login | Trackpack{% endblock %}
+
+<!-- Picks up where base.html left off -->
+{% block content %}
+
+<p>Login</p>
+<form method="post">
+    <input id="first_name" type="text" placeholder="First Name">
+    <input id="last_name" type="text" placeholder="Last Name">
+    <input id="student_number" type="text" placeholder="Student Number">
+    <select id="grade_level">
+        <option value="9">Freshman (9th grade)</option>
+        <option value="10">Sophomore (10th grade)</option>
+        <option value="11">Junior (11th grade)</option>
+        <option value="12">Senior (12th grade)</option>
+    </select>
+    <input type="submit" value="Sign Up">
+</form>
+{% endblock %}
