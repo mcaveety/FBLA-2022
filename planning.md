@@ -1,8 +1,14 @@
-# FBLA 2022 Project Plan
+# FBLA 2022 Project Planning
 
 A reverse-chronological order log of project planning phases can be found here. 
 
 This page will be updated as new changes are decided upon to showcase the design process of which the project undergoes.
+
+***
+
+## 1/3/22
+
++ plan.md renamed to planning.md
 
 ***
 
