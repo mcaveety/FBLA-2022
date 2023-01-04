@@ -1,0 +1,11 @@
+<!-- Connects dashboard.html to base.html -->
+{% extends "base.html" %}
+
+<!-- Changes page title -->
+{% block title %}Dashboard | Trackpack{% endblock %}
+
+<!-- Picks up where base.html left off -->
+{% block content %}
+
+<p>Your student number is: {{ student_number }}</p>
+{% endblock %}
