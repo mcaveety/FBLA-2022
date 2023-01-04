@@ -58,7 +58,6 @@ def login_page():
         return render_template("login.html")
 
     if request.method == "POST":
-        data = request.form.items()
         for element_name, value in request.form.items():
             print(element_name, value)
         first_name = request.form.get('first_name')
