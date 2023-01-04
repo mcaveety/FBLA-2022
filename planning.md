@@ -9,6 +9,9 @@ This page will be updated as new changes are decided upon to showcase the design
 ## 1/3/22
 
 + plan.md renamed to planning.md
++ New template dashboard.html created
++ Add user session functionality (similar to browser cookies) to track if a user is logged in
++ Created a decorator in server.py to wrap functions, redirecting users when appropriate
 
 ***
 
