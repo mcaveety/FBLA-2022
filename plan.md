@@ -6,6 +6,16 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
+## 1/2/22
+
++ Created templates and static folder to hold the HTML, CSS, and other related assets for the visuals of the website
+  + Two templates, base.html and login.html, were created
++ requirements.txt created; flask, flask-session, and python-dotenv were listed as project requirements
++ server.py created with code to run a (basic) login and dashboard page for the website
++ HTML form created on the login page which redirects on submission
+
+***
+
 ## 12/28/22
 
 + Project repository created.
