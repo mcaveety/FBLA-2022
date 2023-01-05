@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_session import Session
 from functools import wraps
+import users
+
 
 # Allows environment variables to be accessed
 load_dotenv()
@@ -58,10 +60,11 @@ def login_page():
         return render_template("login.html")
 
     if request.method == "POST":
+        new_user_info = {}
         for element_name, value in request.form.items():
-            print(element_name, value)
-        first_name = request.form.get('first_name')
-        print(first_name)
+            new_user_info[element_name] = value
+        print(new_user_info)
+        users.add_user(new_user_info)
         session['student_number'] = request.form.get('student_number')
         return redirect(url_for('dashboard_page'))
 
