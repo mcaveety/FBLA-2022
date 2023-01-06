@@ -63,7 +63,6 @@ def login_page():
         new_user_info = {}
         for element_name, value in request.form.items():
             new_user_info[element_name] = value
-        print(new_user_info)
         users.add_user(new_user_info)
         session['student_number'] = request.form.get('student_number')
         return redirect(url_for('dashboard_page'))
