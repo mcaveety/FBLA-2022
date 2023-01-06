@@ -8,7 +8,8 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ## 1/5/23
 
-+ Finished the creation of adding and checking the users data upon attempted sign-up
++ Finished sign up and login portals
+  + Users cannot login unless if they have already signed up
 
 ## 1/4/23
 
