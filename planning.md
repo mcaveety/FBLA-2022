@@ -6,14 +6,18 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
-## 1/4/22
+## 1/5/23
+
++ Finished the creation of adding and checking the users data upon attempted sign-up
+
+## 1/4/23
 
 + Created data folder for storing JSON files
 + Created users.py to handle the functionality of adding and checking users in a JSON file
 + Created users.json to store existing user information
 + Began the creation of adding and checking the users data upon attempted sign-up
 
-## 1/3/22
+## 1/3/23
 
 + plan.md renamed to planning.md
 + New template dashboard.html created
@@ -22,7 +26,7 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
-## 1/2/22
+## 1/2/23
 
 + Created templates and static folder to hold the HTML, CSS, and other related assets for the visuals of the website
   + Two templates, base.html and login.html, were created
