@@ -5,15 +5,22 @@ users_path = r"data\users.json"
 
 def open_file(file_path):
     with open(file_path, 'r') as file:
-        data = json.load(file)
-        return data
+        try:
+            data = json.load(file)
+            print("success")
+            return data
+        except json.JSONDecodeError:
+            print("fail")
+            return []
 
 
 def write_file(file_path, changes):
+    data = open_file(file_path)
     with open(file_path, 'w') as file:
-        data = open_file(file_path)
+        print(data)
         data.append(changes)
-        file.write(json.dumps(changes, indent=4))
+        print(data)
+        json.dump(data, file, indent=4)
 
 
 def check_user(student_number):
