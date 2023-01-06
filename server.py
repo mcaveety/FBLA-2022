@@ -60,12 +60,20 @@ def login_page():
         return render_template("login.html")
 
     if request.method == "POST":
-        new_user_info = {}
-        for element_name, value in request.form.items():
-            new_user_info[element_name] = value
-        users.add_user(new_user_info)
-        session['student_number'] = request.form.get('student_number')
-        return redirect(url_for('dashboard_page'))
+        if request.form['btn'] == "Sign Up":
+            new_user_info = {}
+            for element_name, value in request.form.items():
+                new_user_info[element_name] = value
+            new_user_info.pop('btn')
+            users.add_user(new_user_info)
+            session['student_number'] = request.form.get('student_number')
+            return redirect(url_for('dashboard_page'))
+        elif request.form['btn'] == "Login":
+            if users.check_user(request.form.get('student_number')):
+                session['student_number'] = request.form.get('student_number')
+                return redirect(url_for('dashboard_page'))
+            else:
+                return redirect(url_for('login_page'))
 
 
 # Flask app is run, allowing access of the webpage at localhost:8080 in a web browser
