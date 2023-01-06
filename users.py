@@ -28,12 +28,12 @@ def check_user(student_number):
     users_data = open_file(users_path)
     for user in users_data:
         if user['student_number'] == student_number:
-            return False
-    return True
+            return True
+    return False
 
 
 def add_user(new_user_info):
-    if check_user(new_user_info['student_number']):
+    if not check_user(new_user_info['student_number']):
         print("Creating new user.")
         write_file(users_path, new_user_info)
     else:
