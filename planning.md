@@ -11,12 +11,16 @@ This page will be updated as new changes are decided upon to showcase the design
 + Finished sign up and login portals
   + Users cannot login unless if they have already signed up
 
+***
+
 ## 1/4/23
 
 + Created data folder for storing JSON files
 + Created users.py to handle the functionality of adding and checking users in a JSON file
 + Created users.json to store existing user information
 + Began the creation of adding and checking the users data upon attempted sign-up
+
+***
 
 ## 1/3/23
 
