@@ -40,3 +40,9 @@ def add_user(new_user_info):
     else:
         return False
 
+
+def lookup_user(student_number):
+    users_data = open_file(users_path)
+    for user in users_data:
+        if user['student_number'] == student_number:
+            return user
