@@ -10,6 +10,7 @@ This page will be updated as new changes are decided upon to showcase the design
 
 + Fixed bug where users could sign up if student number was already in use
 + Added error message display for unsuccessful signup and login attempts
++ Discovered required and flashing
 
 ***
 
