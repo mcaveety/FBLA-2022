@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_session import Session
 from functools import wraps
-import users
+import users, events
 
 
 # Allows environment variables to be accessed
@@ -47,8 +47,15 @@ def splash_page():
 @app.route("/dashboard", methods=["GET", "POST"])
 @check_session()
 def dashboard_page():
-    return render_template("dashboard.html", student_number=session['student_number'])
+    user_data = users.lookup_user(session['student_number'])
+    return render_template("dashboard.html", user_data=user_data)
 
+
+@app.route("/events")
+@check_session()
+def events_page():
+    events_data = events.load_events()
+    return render_template("events.html", events_data=events_data)
 
 # Login and Sign-Up page
 @app.route("/login", methods=["GET", "POST"])
@@ -59,7 +66,7 @@ def login_page():
     if request.method == "GET":
         error_sign_up = request.args.get('error_sign_up', "")
         error_login = request.args.get('error_login', "")
-        return render_template("login.html", error_sign_up=error_sign_up, error_login=error_login)
+        return render_template('login.html', error_sign_up=error_sign_up, error_login=error_login)
 
     if request.method == "POST":
         if request.form['btn'] == "Sign Up":
