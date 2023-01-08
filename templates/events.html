@@ -1,0 +1,22 @@
+<!-- Connects events.html to base.html -->
+{% extends "base.html" %}
+
+<!-- Changes page title -->
+{% block title %}Events | TrackPack{% endblock %}
+
+<!-- Picks up where base.html left off -->
+{% block content %}
+
+<h2>Events & activities</h2>
+
+{% for event in events_data %}
+
+    <h3>{{ event['event_name'] }}</h3>
+    <p>{{ event['event_desc'] }}</p>
+    <h4>Type: {{ event['event_type'] }}</h4>
+    <h4>Date: {{ event['event_date'] }}</h4>
+    <h4>Time: {{ event['event_time'] }}</h4>
+
+{% endfor %}
+
+{% endblock %}
