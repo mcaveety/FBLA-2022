@@ -6,6 +6,13 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
+## 1/7/23
+
++ Fixed bug where users could sign up if student number was already in use
++ Added error message display for unsuccessful signup and login attempts
+
+***
+
 ## 1/5/23
 
 + Finished sign up and login portals
