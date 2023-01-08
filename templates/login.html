@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 
 <!-- Changes page title -->
-{% block title %}Login | Trackpack{% endblock %}
+{% block title %}Login | TrackPack{% endblock %}
 
 <!-- Picks up where base.html left off -->
 {% block content %}
@@ -10,16 +10,18 @@
 <p>Login</p>
 
     <form name="login" method="post">
-        <input id="student_number" name="student_number" placeholder="Student Number">
+        <input id="student_number_login" name="student_number" placeholder="Student Number" required>
         <input type="submit" name="btn" value="Login">
     </form>
 
+<h3>{{ error_login }}</h3>
+
     <p>Sign Up</p>
 <form name="sign_up" method="post">
-    <input id="first_name" name="first_name" type="text" placeholder="First Name">
-    <input id="last_name" name="last_name" type="text" placeholder="Last Name">
-    <input id="student_number" name="student_number" type="text" placeholder="Student Number">
-    <select id="grade_level" name="grade_level">
+    <input id="first_name" name="first_name" type="text" placeholder="First Name" required>
+    <input id="last_name" name="last_name" type="text" placeholder="Last Name" required>
+    <input id="student_number" name="student_number" type="text" placeholder="Student Number" required>
+    <select id="grade_level" name="grade_level" placeholder="">
         <option value="9">Freshman (9th grade)</option>
         <option value="10">Sophomore (10th grade)</option>
         <option value="11">Junior (11th grade)</option>
@@ -27,5 +29,7 @@
     </select>
     <input type="submit" name="btn" value="Sign Up">
 </form>
+
+<h3>{{ error_sign_up }}</h3>
 
 {% endblock %}
