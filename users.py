@@ -36,6 +36,7 @@ def add_user(new_user_info):
     if not check_user(new_user_info['student_number']):
         print("Creating new user.")
         write_file(users_path, new_user_info)
+        return True
     else:
         return False
 
