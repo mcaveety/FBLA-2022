@@ -10,13 +10,15 @@
 <h2>Events & activities</h2>
 
 {% for event in events_data %}
-
-    <h3>{{ event['event_name'] }}</h3>
-    <p>{{ event['event_desc'] }}</p>
-    <h4>Type: {{ event['event_type'] }}</h4>
-    <h4>Date: {{ event['event_date'] }}</h4>
-    <h4>Time: {{ event['event_time'] }}</h4>
-
+<a href="{{ url_for('events_page', event_num=event['event_num']) }}">
+<button>
+    {{ event['event_name'] }}<br>
+    {{ event['event_desc'] }}<br>
+    Type: {{ event['event_type'] }}<br>
+    Date: {{ event['event_date'] }}<br>
+    Time: {{ event['event_time'] }}
+</button>
+</a>
 {% endfor %}
 
 {% endblock %}
