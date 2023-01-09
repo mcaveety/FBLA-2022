@@ -55,6 +55,9 @@ def dashboard_page():
 @check_session()
 def events_page():
     events_data = events.load_events()
+    if request.args.get('event_num', None):
+        if events_data[int(request.args['event_num'])]:
+            return render_template("event_info.html", event=events_data[int(request.args['event_num'])])
     return render_template("events.html", events_data=events_data)
 
 # Login and Sign-Up page

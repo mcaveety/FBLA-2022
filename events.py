@@ -4,6 +4,29 @@ from users import open_file, write_file
 events_path = r"data\events.json"
 
 
+def add_event_nums(file_path):
+	data = open_file(file_path)
+	for i, event in enumerate(data):
+		event['event_num'] = i
+	with open(file_path, 'w') as file:
+		json.dump(data, file, indent=4)
+
+
+def add_event_points(file_path):
+	data = open_file(file_path)
+	for event in data:
+		if event['event_type'] == "Fun":
+			event['event_points'] = 25
+		elif event['event_type'] == "Sporting":
+			event['event_points'] = 50
+		elif event['event_type'] == "Art":
+			event['event_points'] = 75
+		elif event['event_type'] == "Academic":
+			event['event_points'] = 100
+	with open(file_path, 'w') as file:
+		json.dump(data, file, indent=4)
+
+
 def add_event():
 	event_info = {
 		'event_name': input("Event name:"),
@@ -17,3 +40,6 @@ def add_event():
 
 def load_events():
 	return open_file(events_path)
+
+
+add_event_points(events_path)
