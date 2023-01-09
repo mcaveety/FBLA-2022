@@ -73,11 +73,11 @@ __The following features were considered based on specific criteria from the pro
 + Food rewards: Chick-Fil-A lunch (a typical offer for being an Honors student), free a-la-carte item from the cafeteria, candy bag
 + School Spirit Item: School spirit hoodie, t-shirt, lanyards, stickers
 
-- [ ] *"Assign a point value for participating in or attending events."*
+- [x] *"Assign a point value for participating in or attending events."*
 + Participating in an event, for example, playing on a sports team, being in the school band, or volunteering at an event earns more points than watching, listening, or attending the same events in order to promote direct involvement rather than observation (but still rewarding both).
 + Proof of participating in or attending an event must be submitted. This could include a text box explaining what was done or an image upload to take a picture of a ticket to verify that the student was present.
 
-- [ ] *"Must have at least five sporting events and five non-sports school events."*
+- [x] *"Must have at least five sporting events and five non-sports school events."*
 + Sporting events include, but are not limited to: Baseball, basketball, soccer, football, flag football, tennis, golf, lacrosse, swimming
 + Non-Sporting events include, but are not limited to: Orchestra concert, band concert, math competition, Poetry Jam, Open House Information Night, Prom, Homecoming, studying sessions, club meetings
 + A teacher / administrator profile type could be created so events can be added as needed
