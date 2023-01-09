@@ -51,14 +51,23 @@ def dashboard_page():
     return render_template("dashboard.html", user_data=user_data)
 
 
-@app.route("/events")
+@app.route("/events", methods=["GET", "POST"])
 @check_session()
 def events_page():
     events_data = events.load_events()
-    if request.args.get('event_num', None):
-        if events_data[int(request.args['event_num'])]:
-            return render_template("event_info.html", event=events_data[int(request.args['event_num'])])
-    return render_template("events.html", events_data=events_data)
+    if request.method == "GET":
+        if request.args.get('event_num', None):
+            if events_data[int(request.args['event_num'])]:
+                return render_template("event_info.html", event=events_data[int(request.args['event_num'])])
+        return render_template("events.html", events_data=events_data)
+
+    if request.method == "POST":
+        if request.form.get('confirm_attend', None):
+            users.add_attended(session.get('student_number', None), int(request.args['event_num']))
+            return redirect(url_for('events_page'))
+        else:
+            return redirect(url_for('events_page', event_num=int(request.args['event_num'])))
+
 
 # Login and Sign-Up page
 @app.route("/login", methods=["GET", "POST"])
@@ -69,7 +78,7 @@ def login_page():
     if request.method == "GET":
         error_sign_up = request.args.get('error_sign_up', "")
         error_login = request.args.get('error_login', "")
-        return render_template('login.html', error_sign_up=error_sign_up, error_login=error_login)
+        return render_template("login.html", error_sign_up=error_sign_up, error_login=error_login)
 
     if request.method == "POST":
         if request.form['btn'] == "Sign Up":
