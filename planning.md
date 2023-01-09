@@ -6,6 +6,11 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
+## 1/8/23
+
++ Added point values to each event
++ Added ability to select and view a specific event on the events page
+
 ## 1/7/23
 
 + Fixed bug where users could sign up if student number was already in use
