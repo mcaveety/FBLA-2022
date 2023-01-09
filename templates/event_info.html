@@ -6,14 +6,22 @@
 
 <!-- Picks up where base.html left off -->
 {% block content %}
-
-<a href="{{ url_for('events_page') }}">
-<button>
+<p>
     {{ event['event_name'] }}<br>
     {{ event['event_desc'] }}<br>
     Type: {{ event['event_type'] }}<br>
     Date: {{ event['event_date'] }}<br>
     Time: {{ event['event_time'] }}
+</p>
+<form method="post">
+    <input type="checkbox" id="confirm_attend" name="confirm_attend">
+    <label for="confirm_attend">I certify I attended this event</label>
+    <input type="submit">
+</form>
+
+<a href="{{ url_for('events_page') }}">
+<button>
+Back to Events
 </button>
 </a>
 
