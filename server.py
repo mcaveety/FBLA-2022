@@ -87,6 +87,12 @@ def events_page():
             ))
 
 
+# Leaderboard page
+@app.route("/leaderboard")
+def leaderboard_page():
+    return render_template("leaderboard.html")
+
+
 # Login and Sign-Up page
 @app.route("/login", methods=["GET", "POST"])
 def login_page():
