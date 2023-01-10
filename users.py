@@ -1,6 +1,7 @@
 import json
 
 users_path = r"data\users.json"
+events_path = r"data\events.json"
 
 
 def open_file(file_path):
@@ -44,26 +45,54 @@ def update_user(file_path, student_num, changes):
             if student_num == student['student_number']:
                 data.pop(i)
                 data.append(changes)
+            break
 
         json.dump(data, file, indent=4)
 
 
-def add_attended(student_num, event_num, file_path=users_path):
+def add_attended(student_num, event_num, users_fpath=users_path, events_fpath=events_path):
     """
     Adds event to student's attended events
     :param student_num: str
     :param event_num: int
-    :param file_path: rstr
+    :param users_fpath: rstr
+    :param events_fpath: rstr
     :return: None
     """
-    data = open_file(file_path)
-    for student in data:
+    user_data = open_file(users_fpath)
+    event_data = open_file(events_fpath)
+
+    # Find the student's data
+    for student in user_data:
         if student_num == student['student_number']:
+
+            # Add non-duplicate event to attended list
             events_attended = student.get('events_attended', [])
             if event_num not in events_attended:
                 events_attended.append(event_num)
+
+                # Add points to user
+                points = student.get('points', 0)
+                points += get_points(event_data, event_num)
+
             student['events_attended'] = events_attended
-            update_user(file_path, student_num, student)
+
+            update_user(users_fpath, student_num, student)
+            break
+
+
+def get_points(event_data, event_num):
+    """
+    Calculates how many points the user has
+    :attended: list
+    :file_path: rstr
+    :return: None
+    """
+    # Load both files
+    for event in event_data:
+        if event_num == event['num']:
+            return event['points']
+
 
 
 def check_user(student_number):
