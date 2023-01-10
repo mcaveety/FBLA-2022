@@ -10,6 +10,7 @@
 
 <table>
     <tr>
+        <th>Position</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Events Attended</th>
@@ -18,7 +19,14 @@
 
     {% for student in users_data %}
 
+    {{ top_student = student }}
+
+    {% for student_chk in users_data %}
+        {% if student_chk['points'] > top_student['points'] %}
+
+        {{ top_student = student_chk }}
     <tr>
+        <td>{{ loop.index }}</td>
         <td>{{ student['first_name'] }}</td>
         <td>{{ student['last_name'] }}</td>
         <td>{{ student['num_attended'] }}</td>
