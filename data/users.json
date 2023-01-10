@@ -12,5 +12,21 @@
             3,
             10
         ]
+    },
+    {
+        "first_name": "Michelle",
+        "last_name": "McAveety",
+        "student_number": "4697364",
+        "grade_level": "9",
+        "points": 325,
+        "num_attended": 6,
+        "events_attended": [
+            0,
+            6,
+            5,
+            3,
+            15,
+            12
+        ]
     }
 ]
