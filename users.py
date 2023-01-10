@@ -45,7 +45,7 @@ def update_user(file_path, student_num, changes):
             if student_num == student['student_number']:
                 data.pop(i)
                 data.append(changes)
-            break
+                break
 
         json.dump(data, file, indent=4)
 
@@ -74,6 +74,7 @@ def add_attended(student_num, event_num, users_fpath=users_path, events_fpath=ev
                 # Add points to user
                 points = student.get('points', 0)
                 points += get_points(event_data, event_num)
+                student['points'] = points
 
             student['events_attended'] = events_attended
 
@@ -92,7 +93,6 @@ def get_points(event_data, event_num):
     for event in event_data:
         if event_num == event['num']:
             return event['points']
-
 
 
 def check_user(student_number):
@@ -116,6 +116,8 @@ def add_user(new_user_info):
     """
     if not check_user(new_user_info['student_number']):
         print("Creating new user.")
+        new_user_info['points'] = 0
+        new_user_info['events_attended'] = []
         write_file(users_path, new_user_info)
         return True
     else:
