@@ -6,10 +6,20 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
+## 1/9/23
+
++ Added leaderboard page (wip)
++ Created leaderboard.html and prizes.html
++ Completed events page, users can now add events and earn points
+
+***
+
 ## 1/8/23
 
 + Added point values to each event
 + Added ability to select and view a specific event on the events page
+
+***
 
 ## 1/7/23
 
@@ -87,7 +97,7 @@ __The following features were considered based on specific criteria from the pro
 + Non-Sporting events include, but are not limited to: Orchestra concert, band concert, math competition, Poetry Jam, Open House Information Night, Prom, Homecoming, studying sessions, club meetings
 + A teacher / administrator profile type could be created so events can be added as needed
 
-- [ ] *"Track students' names, grades, and points."*
+- [x] *"Track students' names, grades, and points."*
 + Student name, grade level, student number and DOB can be stored on account creation
 + Points can be tracked using a file which sorts by student number (a unique identifier)
 
@@ -96,7 +106,7 @@ __The following features were considered based on specific criteria from the pro
 + A leaderboard can be visible at all times with optional grade level filters to help students view their progress
 + TBD: How can students view a "final" copy of their rankings? Should there be a special page to show statistics (Ex. archives of Q1, Q2, etc. data with top events and students? A page to view current quarter statistics?
 
-- [ ] *"Data must be stored persistently. Storage may be in a relational database, a document-oriented NoSQL database, flat text files, flat JSON, or XML files."*
+- [ ] ~~*"Data must be stored persistently. Storage may be in a relational database, a document-oriented NoSQL database, flat text files, flat JSON, or XML files."*~~
 + This will be revisited at a later date. Consider using flat JSON files for general data.
 + How will account login info be stored?
 
