@@ -89,8 +89,10 @@ def events_page():
 
 # Leaderboard page
 @app.route("/leaderboard")
+@check_session()
 def leaderboard_page():
-    return render_template("leaderboard.html")
+    users_data = users.open_file()
+    return render_template("leaderboard.html", users_data=users_data)
 
 
 # Login and Sign-Up page
@@ -149,5 +151,19 @@ def login_page():
                 ))
 
 
+@app.route("/prizes", methods=["GET", "POST"])
+@check_session()
+def prizes_page():
+    return render_template("prizes.html")
+
+
+# Error Handler code from
+# https://flask.palletsprojects.com/en/1.0.x/patterns/errorpages/
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect(url_for('splash_page'))
+
+
 # Flask app is run, allowing access of the webpage at localhost:8080 in a web browser
+
 app.run(host="localhost", port=port)
