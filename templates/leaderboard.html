@@ -1,0 +1,14 @@
+<!-- Connects leaderboard.html to base.html -->
+{% extends "base.html" %}
+
+<!-- Changes page title -->
+{% block title %}Leaderboard | TrackPack{% endblock %}
+
+<!-- Picks up where base.html left off -->
+{% block content %}
+
+<h3>{{ user_data['first_name'] }} {{ user_data['last_name'] }}</h3>
+<h4>Student Number: {{ user_data['student_number'] }}</h4>
+<h4>Grade Level: {{ user_data['grade_level'] }}</h4>
+
+{% endblock %}
