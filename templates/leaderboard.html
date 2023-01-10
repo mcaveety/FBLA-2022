@@ -7,8 +7,27 @@
 <!-- Picks up where base.html left off -->
 {% block content %}
 
-<h3>{{ user_data['first_name'] }} {{ user_data['last_name'] }}</h3>
-<h4>Student Number: {{ user_data['student_number'] }}</h4>
-<h4>Grade Level: {{ user_data['grade_level'] }}</h4>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Events Attended</th>
+        <th>Points</th>
+    </tr>
+
+    {% for student in users_data %}
+
+    <tr>
+        <td>{{ student['first_name'] }}</td>
+        <td>{{ student['last_name'] }}</td>
+        <td>{{ student['num_attended'] }}</td>
+        <td>{{ student['points'] }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
 
 {% endblock %}
