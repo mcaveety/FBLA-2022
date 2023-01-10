@@ -1,146 +1,146 @@
 [
     {
-        "event_name": "Boy's Varsity Baseball Game",
-        "event_desc": "The boy's baseball team won their first game of the season!",
-        "event_type": "Sporting",
-        "event_date": "March 3rd",
-        "event_time": "3:00 PM",
-        "event_num": 0,
-        "event_points": 50
+        "name": "Boy's Varsity Baseball Game",
+        "desc": "The boy's baseball team won their first game of the season!",
+        "type": "Sporting",
+        "date": "March 3rd",
+        "time": "3:00 PM",
+        "num": 0,
+        "points": 50
     },
     {
-        "event_name": "Girl's Basketball Game",
-        "event_desc": "The girl's basketball team tried their best, but unfortunately lost :(",
-        "event_type": "Sporting",
-        "event_date": "February 20th",
-        "event_time": "6:00 PM",
-        "event_num": 1,
-        "event_points": 50
+        "name": "Girl's Basketball Game",
+        "desc": "The girl's basketball team tried their best, but unfortunately lost :(",
+        "type": "Sporting",
+        "date": "February 20th",
+        "time": "6:00 PM",
+        "num": 1,
+        "points": 50
     },
     {
-        "event_name": "Co-Ed Soccer Team",
-        "event_desc": "The soccer team won a close game, 3-2!",
-        "event_type": "Sporting",
-        "event_date": "October 7th",
-        "event_time": "4:00 PM",
-        "event_num": 2,
-        "event_points": 50
+        "name": "Co-Ed Soccer Team",
+        "desc": "The soccer team won a close game, 3-2!",
+        "type": "Sporting",
+        "date": "October 7th",
+        "time": "4:00 PM",
+        "num": 2,
+        "points": 50
     },
     {
-        "event_name": "Boy's Football Game",
-        "event_desc": "The football game was the best of the season!!",
-        "event_type": "Sporting",
-        "event_date": "September 14th",
-        "event_time": "5:00 PM",
-        "event_num": 3,
-        "event_points": 50
+        "name": "Boy's Football Game",
+        "desc": "The football game was the best of the season!!",
+        "type": "Sporting",
+        "date": "September 14th",
+        "time": "5:00 PM",
+        "num": 3,
+        "points": 50
     },
     {
-        "event_name": "Girl's Flag Football Game",
-        "event_desc": "The girls won their first game of the season!",
-        "event_type": "Sporting",
-        "event_date": "September 12th",
-        "event_time": "6:00 PM",
-        "event_num": 4,
-        "event_points": 50
+        "name": "Girl's Flag Football Game",
+        "desc": "The girls won their first game of the season!",
+        "type": "Sporting",
+        "date": "September 12th",
+        "time": "6:00 PM",
+        "num": 4,
+        "points": 50
     },
     {
-        "event_name": "Co-Ed Tennis Game",
-        "event_desc": "Unfortunately the tennis team is on a five game losing streak.",
-        "event_type": "Sporting",
-        "event_date": "November 5th",
-        "event_time": "2:00 PM",
-        "event_num": 5,
-        "event_points": 50
+        "name": "Co-Ed Tennis Game",
+        "desc": "Unfortunately the tennis team is on a five game losing streak.",
+        "type": "Sporting",
+        "date": "November 5th",
+        "time": "2:00 PM",
+        "num": 5,
+        "points": 50
     },
     {
-        "event_name": "Golf Tournament",
-        "event_desc": "The gold team performed second best in the district!",
-        "event_type": "Sporting",
-        "event_date": "January 4th",
-        "event_time": "12:00 PM",
-        "event_num": 6,
-        "event_points": 50
+        "name": "Golf Tournament",
+        "desc": "The gold team performed second best in the district!",
+        "type": "Sporting",
+        "date": "January 4th",
+        "time": "12:00 PM",
+        "num": 6,
+        "points": 50
     },
     {
-        "event_name": "Girl's Lacrosse Game",
-        "event_desc": "The girls tied the game 4-4.",
-        "event_type": "Sporting",
-        "event_date": "April 10th",
-        "event_time": "3:00 PM",
-        "event_num": 7,
-        "event_points": 50
+        "name": "Girl's Lacrosse Game",
+        "desc": "The girls tied the game 4-4.",
+        "type": "Sporting",
+        "date": "April 10th",
+        "time": "3:00 PM",
+        "num": 7,
+        "points": 50
     },
     {
-        "event_name": "Co-Ed Swimming Meet",
-        "event_desc": "The swimming team did not place at the finals.",
-        "event_type": "Sporting",
-        "event_date": "October 24th",
-        "event_time": "5:30 PM",
-        "event_num": 8,
-        "event_points": 50
+        "name": "Co-Ed Swimming Meet",
+        "desc": "The swimming team did not place at the finals.",
+        "type": "Sporting",
+        "date": "October 24th",
+        "time": "5:30 PM",
+        "num": 8,
+        "points": 50
     },
     {
-        "event_name": "Senior Orchestra Concert",
-        "event_desc": "The orchestra concert was packed! Families loved the event.",
-        "event_type": "Art",
-        "event_date": "February 8th",
-        "event_time": "7:00 PM",
-        "event_num": 9,
-        "event_points": 75
+        "name": "Senior Orchestra Concert",
+        "desc": "The orchestra concert was packed! Families loved the event.",
+        "type": "Art",
+        "date": "February 8th",
+        "time": "7:00 PM",
+        "num": 9,
+        "points": 75
     },
     {
-        "event_name": "Band Concert",
-        "event_desc": "The band placed 4th at the district level for their awesome performance!",
-        "event_type": "Art",
-        "event_date": "March 17th",
-        "event_time": "4:00 PM",
-        "event_num": 10,
-        "event_points": 75
+        "name": "Band Concert",
+        "desc": "The band placed 4th at the district level for their awesome performance!",
+        "type": "Art",
+        "date": "March 17th",
+        "time": "4:00 PM",
+        "num": 10,
+        "points": 75
     },
     {
-        "event_name": "4th Annual Poetry Jam",
-        "event_desc": "125 students showcased their prose at our delightful event.",
-        "event_type": "Art",
-        "event_date": "December 6th",
-        "event_time": "11:00 AM",
-        "event_num": 11,
-        "event_points": 75
+        "name": "4th Annual Poetry Jam",
+        "desc": "125 students showcased their prose at our delightful event.",
+        "type": "Art",
+        "date": "December 6th",
+        "time": "11:00 AM",
+        "num": 11,
+        "points": 75
     },
     {
-        "event_name": "Algebra II Math Competition",
-        "event_desc": "Our math team won the first place prize at their last competition of the season.",
-        "event_type": "Academic",
-        "event_date": "May 13th",
-        "event_time": "10:00 AM",
-        "event_num": 12,
-        "event_points": 100
+        "name": "Algebra II Math Competition",
+        "desc": "Our math team won the first place prize at their last competition of the season.",
+        "type": "Academic",
+        "date": "May 13th",
+        "time": "10:00 AM",
+        "num": 12,
+        "points": 100
     },
     {
-        "event_name": "Open House Information Night",
-        "event_desc": "We welcomed students back to school and enjoyed meeting our new teachers!",
-        "event_type": "Academic",
-        "event_date": "August 10th",
-        "event_time": "6:30 PM",
-        "event_num": 13,
-        "event_points": 100
+        "name": "Open House Information Night",
+        "desc": "We welcomed students back to school and enjoyed meeting our new teachers!",
+        "type": "Academic",
+        "date": "August 10th",
+        "time": "6:30 PM",
+        "num": 13,
+        "points": 100
     },
     {
-        "event_name": "Junior And Senior Prom",
-        "event_desc": "We had the biggest prom in school history and had so much fun! :)",
-        "event_type": "Fun",
-        "event_date": "May 20th",
-        "event_time": "8:00 PM",
-        "event_num": 14,
-        "event_points": 25
+        "name": "Junior And Senior Prom",
+        "desc": "We had the biggest prom in school history and had so much fun! :)",
+        "type": "Fun",
+        "date": "May 20th",
+        "time": "8:00 PM",
+        "num": 14,
+        "points": 25
     },
     {
-        "event_name": "Homecoming",
-        "event_desc": "After a successful football season, we enjoyed a relaxing night with our fellow students.",
-        "event_type": "Fun",
-        "event_date": "October 30th",
-        "event_time": "7:30 PM",
-        "event_num": 15,
-        "event_points": 25
+        "name": "Homecoming",
+        "desc": "After a successful football season, we enjoyed a relaxing night with our fellow students.",
+        "type": "Fun",
+        "date": "October 30th",
+        "time": "7:30 PM",
+        "num": 15,
+        "points": 25
     }
 ]
