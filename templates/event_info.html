@@ -7,17 +7,19 @@
 <!-- Picks up where base.html left off -->
 {% block content %}
 <p>
-    {{ event['event_name'] }}<br>
-    {{ event['event_desc'] }}<br>
-    Type: {{ event['event_type'] }}<br>
-    Date: {{ event['event_date'] }}<br>
-    Time: {{ event['event_time'] }}
+    {{ event['name'] }}<br>
+    {{ event['desc'] }}<br>
+    Type: {{ event['type'] }}<br>
+    Date: {{ event['date'] }}<br>
+    Time: {{ event['time'] }}
 </p>
 <form method="post">
     <input type="checkbox" id="confirm_attend" name="confirm_attend">
     <label for="confirm_attend">I certify I attended this event</label>
     <input type="submit">
 </form>
+
+<p>{{ confirm_error }}</p>
 
 <a href="{{ url_for('events_page') }}">
 <button>
