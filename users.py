@@ -4,7 +4,7 @@ users_path = r"data\users.json"
 events_path = r"data\events.json"
 
 
-def open_file(file_path):
+def open_file(file_path=users_path):
     """
     Opens a file and returns the data
     :param file_path: rstr
@@ -69,7 +69,11 @@ def add_attended(student_num, event_num, users_fpath=users_path, events_fpath=ev
             # Add non-duplicate event to attended list
             events_attended = student.get('events_attended', [])
             if event_num not in events_attended:
+                # Add event
                 events_attended.append(event_num)
+
+                # Add 1 to total attended
+                student['num_attended'] += 1
 
                 # Add points to user
                 points = student.get('points', 0)
@@ -115,9 +119,11 @@ def add_user(new_user_info):
     :return: Bool
     """
     if not check_user(new_user_info['student_number']):
-        print("Creating new user.")
-        new_user_info['points'] = 0
-        new_user_info['events_attended'] = []
+        new_user_info.update({
+            'points': 0,
+            'num_attended': 0,
+            'events_attended': []
+        })
         write_file(users_path, new_user_info)
         return True
     else:
