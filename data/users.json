@@ -1,22 +1,16 @@
 [
     {
-        "first_name": "Michelle",
-        "last_name": "McAveety",
-        "student_number": "4697364",
+        "first_name": "John",
+        "last_name": "Smith",
+        "student_number": "123456",
         "grade_level": "9",
-        "points": 50,
+        "points": 225,
+        "num_attended": 4,
         "events_attended": [
-            5
-        ]
-    },
-    {
-        "first_name": "Helen",
-        "last_name": "Zhang",
-        "student_number": "1234",
-        "grade_level": "9",
-        "points": 50,
-        "events_attended": [
-            5
+            0,
+            5,
+            3,
+            10
         ]
     }
 ]
