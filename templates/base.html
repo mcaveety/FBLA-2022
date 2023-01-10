@@ -8,7 +8,33 @@
     <h2>TrackPack</h2>
     <h4>For tracking your school activities</h4>
 
+    {% if session['student_number'] %}
+
+    <p>{{ session['student_number'] }}</p>
+
+    <a href="{{ url_for('events_page') }}">
+        <button>Events</button>
+    </a>
+
+    <a href="{{ url_for('leaderboard_page') }}">
+        <button>Leaderboard</button>
+    </a>
+
+    <a href="{{ url_for('reset_session') }}">
+        <button>Log Out</button>
+    </a>
+
+    {% else %}
+
+    <a href="{{ url_for('login_page') }}">
+        <button>Log In</button>
+    </a>
+
+    {% endif %}
+
 {% block content %}
+
+    <p>Basic website info here</p>
 
 {% endblock %}
 
