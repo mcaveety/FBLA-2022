@@ -4,10 +4,11 @@ from users import open_file, write_file
 events_path = r"data\events.json"
 
 
+# Used to initially format event data
 def add_event_nums(file_path):
 	data = open_file(file_path)
 	for i, event in enumerate(data):
-		event['event_num'] = i
+		event['num'] = i
 	with open(file_path, 'w') as file:
 		json.dump(data, file, indent=4)
 
@@ -15,25 +16,25 @@ def add_event_nums(file_path):
 def add_event_points(file_path):
 	data = open_file(file_path)
 	for event in data:
-		if event['event_type'] == "Fun":
-			event['event_points'] = 25
-		elif event['event_type'] == "Sporting":
-			event['event_points'] = 50
-		elif event['event_type'] == "Art":
-			event['event_points'] = 75
-		elif event['event_type'] == "Academic":
-			event['event_points'] = 100
+		if event['type'] == "Fun":
+			event['points'] = 25
+		elif event['type'] == "Sporting":
+			event['points'] = 50
+		elif event['type'] == "Art":
+			event['points'] = 75
+		elif event['type'] == "Academic":
+			event['points'] = 100
 	with open(file_path, 'w') as file:
 		json.dump(data, file, indent=4)
 
 
 def add_event():
 	event_info = {
-		'event_name': input("Event name:"),
-		'event_desc': input("Event desc:"),
-		'event_type': input("Event type:"),
-		'event_date': input("Event date:"),
-		'event_time': input("Event time:")
+		'name': input("Event name:"),
+		'desc': input("Event desc:"),
+		'type': input("Event type:"),
+		'date': input("Event date:"),
+		'time': input("Event time:")
 	}
 	write_file(events_path, event_info)
 
@@ -41,5 +42,3 @@ def add_event():
 def load_events():
 	return open_file(events_path)
 
-
-add_event_points(events_path)
