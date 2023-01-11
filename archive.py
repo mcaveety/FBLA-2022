@@ -1,4 +1,6 @@
 import json
+
+import users
 from users import open_file, write_file
 
 users_path = r"data\users.json"
@@ -11,7 +13,7 @@ def archive_file(file_path=users_path):
 	:return: None
 	"""
 	archive_path = update_toc()
-	data = open_file(file_path)
+	data = users.assign_winners()
 	with open(archive_path, 'x') as file:
 		json.dump(data, file, indent=4)
 
@@ -21,6 +23,8 @@ def archive_file(file_path=users_path):
 			'num_attended': 0,
 			'events_attended': []
 		})
+		if user.get('winner', None):
+			user.pop('winner')
 
 	with open(file_path, 'w') as file:
 		json.dump(data, file, indent=4)
@@ -43,6 +47,7 @@ def initialize_toc(file_path=archive_toc_path):
 	toc = [toc]
 	with open(file_path, 'w') as file:
 		json.dump(toc, file, indent=4)
+
 
 def update_toc(file_path=archive_toc_path):
 	"""
