@@ -5,6 +5,7 @@ from flask_session import Session
 from functools import wraps
 import users
 import events
+import archive
 
 
 # Allows environment variables to be accessed
@@ -88,11 +89,18 @@ def events_page():
 
 
 # Leaderboard page
-@app.route("/leaderboard")
+@app.route("/leaderboard", methods=["GET", "POST"])
 @check_session()
 def leaderboard_page():
-    users_data = users.open_file()
-    return render_template("leaderboard.html", users_data=users_data)
+    file_path = users.users_path
+    if request.method == "POST":
+        if request.form['btn'] == "Archive":
+            archive.archive_file()
+        elif request.form['btn'] == "Select":
+            file_path = request.form.get('select_qy')
+    users_data = users.sort_leaderboard(file_path=file_path)
+    qy_list = list(archive.collect_paths())
+    return render_template("leaderboard.html", users_data=users_data, qy_list=qy_list)
 
 
 # Login and Sign-Up page
