@@ -1,4 +1,5 @@
 import json
+import random
 
 users_path = r"data\users.json"
 events_path = r"data\events.json"
@@ -99,6 +100,36 @@ def get_points(event_data, event_num):
             return event['points']
 
 
+def assign_winners(file_path=users_path):
+    user_data = open_file(file_path)
+    top_user = user_data[0]
+    pos = 0
+    for i in range(len(user_data)):
+        if user_data[i]['points'] > top_user['points']:
+            top_user = user_data[i]
+            pos = i
+    user_data[pos]['winner'] = True
+
+    grade_levels = ["9", "10", "11", "12"]
+    winners_index_list = []
+    for i in range(len(grade_levels)):
+        temp_list = []
+        grade_level = grade_levels[i]
+        for i, user in enumerate(user_data):
+            if user.get('winner', None):
+                continue
+            elif grade_level == user['grade_level']:
+                temp_list.append(i)
+        if len(temp_list) > 0:
+            winners_index_list.append(temp_list[random.randint(0, len(temp_list))])
+
+    for i, user in enumerate(user_data):
+        if i in winners_index_list:
+            user['winner'] = True
+    return user_data
+
+
+
 def check_user(student_number):
     """
     Checks whether a student number is already in the database
@@ -133,17 +164,15 @@ def add_user(new_user_info):
 def sort_leaderboard(file_path=users_path):
     user_data = open_file(file_path)
     sorted_data = []
-    for k in range(len(user_data)):
+    for i in range(len(user_data)):
         pos = 0
         top_user = user_data[0]
-        for i in range(len(user_data)):
-            print(user_data[i]['points'], top_user['points'])
-            if user_data[i]['points'] > top_user['points']:
-                top_user = user_data[i]
-                pos = i
+        for j in range(len(user_data)):
+            if user_data[j]['points'] > top_user['points']:
+                top_user = user_data[j]
+                pos = j
         user_data.pop(pos)
         sorted_data.append(top_user)
-    print(sorted_data)
     return sorted_data
 
 
