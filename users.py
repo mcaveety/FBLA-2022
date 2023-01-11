@@ -130,6 +130,23 @@ def add_user(new_user_info):
         return False
 
 
+def sort_leaderboard(file_path=users_path):
+    user_data = open_file(file_path)
+    sorted_data = []
+    for k in range(len(user_data)):
+        pos = 0
+        top_user = user_data[0]
+        for i in range(len(user_data)):
+            print(user_data[i]['points'], top_user['points'])
+            if user_data[i]['points'] > top_user['points']:
+                top_user = user_data[i]
+                pos = i
+        user_data.pop(pos)
+        sorted_data.append(top_user)
+    print(sorted_data)
+    return sorted_data
+
+
 def lookup_user(student_number):
     """
     Looks up a user's data
