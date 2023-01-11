@@ -1,32 +1,20 @@
 [
     {
-        "first_name": "John",
-        "last_name": "Smith",
-        "student_number": "123456",
-        "grade_level": "9",
-        "points": 225,
-        "num_attended": 4,
-        "events_attended": [
-            0,
-            5,
-            3,
-            10
-        ]
-    },
-    {
         "first_name": "Michelle",
         "last_name": "McAveety",
         "student_number": "4697364",
         "grade_level": "9",
-        "points": 325,
-        "num_attended": 6,
-        "events_attended": [
-            0,
-            6,
-            5,
-            3,
-            15,
-            12
-        ]
+        "points": 0,
+        "num_attended": 0,
+        "events_attended": []
+    },
+    {
+        "first_name": "Ned",
+        "last_name": "bayou",
+        "student_number": "123456",
+        "grade_level": "9",
+        "points": 0,
+        "num_attended": 0,
+        "events_attended": []
     }
 ]
