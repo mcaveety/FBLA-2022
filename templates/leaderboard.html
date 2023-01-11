@@ -19,12 +19,6 @@
 
     {% for student in users_data %}
 
-    {{ top_student = student }}
-
-    {% for student_chk in users_data %}
-        {% if student_chk['points'] > top_student['points'] %}
-
-        {{ top_student = student_chk }}
     <tr>
         <td>{{ loop.index }}</td>
         <td>{{ student['first_name'] }}</td>
@@ -36,6 +30,20 @@
     {% endfor %}
 
 </table>
+
+<form name="archive" method="post">
+    <input type="submit" name="btn" value="Archive">
+
+</form>
+
+<form name="qy_form" method="post">
+    <select id="select_qy" name="select_qy">
+        {% for item in qy_list %}
+        <option value="{{ item[1] }}">{{ item[0] }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" name="btn" value="Select">
+</form>
 
 
 {% endblock %}
