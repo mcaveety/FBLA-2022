@@ -15,6 +15,7 @@
         <th>Last Name</th>
         <th>Events Attended</th>
         <th>Points</th>
+        <th>Winner</th>
     </tr>
 
     {% for student in users_data %}
@@ -25,6 +26,7 @@
         <td>{{ student['last_name'] }}</td>
         <td>{{ student['num_attended'] }}</td>
         <td>{{ student['points'] }}</td>
+        <td>{{ student.get('winner', "") }}</td>
     </tr>
 
     {% endfor %}
