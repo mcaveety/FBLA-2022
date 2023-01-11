@@ -6,6 +6,14 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
+## 1/10/23
+
++ Sorted leaderboards by point value
++ Added ability to archive a quarter's leaderboard
++ Added ability to view old leaderboards
+
+***
+
 ## 1/9/23
 
 + Added leaderboard page (wip)
@@ -101,7 +109,7 @@ __The following features were considered based on specific criteria from the pro
 + Student name, grade level, student number and DOB can be stored on account creation
 + Points can be tracked using a file which sorts by student number (a unique identifier)
 
-- [ ] *"Generate a report at the end of the quarter to show points per student in each grade."*
+- [x] *"Generate a report at the end of the quarter to show points per student in each grade."*
 + Each student can have a dashboard where their points and total events for the year are visible
 + A leaderboard can be visible at all times with optional grade level filters to help students view their progress
 + TBD: How can students view a "final" copy of their rankings? Should there be a special page to show statistics (Ex. archives of Q1, Q2, etc. data with top events and students? A page to view current quarter statistics?
@@ -110,7 +118,7 @@ __The following features were considered based on specific criteria from the pro
 + This will be revisited at a later date. Consider using flat JSON files for general data.
 + How will account login info be stored?
 
-- [ ] *"The user interface must be a GUI with a minimum of five different control types including such things as drop-down lists, text fields, checkboxes, date picker, or other relevant control types."*
+- [ ] ~~*"The user interface must be a GUI with a minimum of five different control types including such things as drop-down lists, text fields, checkboxes, date picker, or other relevant control types."*~~
 + Text box: For inputting event attendance validation, username, password, search fields, etc.
 + Drop-down menu: Filtering by grade level in leaderboard
 + Checkboxes: Prize page filter (show school rewards, food rewards, and school spirit items in a custom combination)
