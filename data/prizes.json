@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Tardy Pass",
+        "desc": "Late to class? Redeem this tardy pass to avoid any disciplinary action!",
+        "type": "School",
+        "img_url": "static\\prize_pass_img.png",
+        "credits": 100
+    },
+    {
+        "name": "Skip the Lunch Line",
+        "desc": "Tired of waiting? Redeem this skip the lunch line pass to eat first!",
+        "type": "School",
+        "img_url": "static\\prize_pass_img.png",
+        "credits": 100
+    },
+    {
+        "name": "Administrator for a Day",
+        "desc": "Are you jealous of all the cool staff who get to ride in golf carts? Become administrator for a day and you can hitch a ride with them too!",
+        "type": "School",
+        "img_url": "static\\prize_badge_img.png",
+        "credits": 400
+    },
+    {
+        "name": "Chick-Fil-A Lunch",
+        "desc": "Enjoy a chicken sandwich, fries and a drink from the tastiest chicken chain in the U.S.!",
+        "type": "Food",
+        "img_url": "static\\prize_cfa_img.png",
+        "credits": 200
+    },
+    {
+        "name": "Candy Bag",
+        "desc": "Snack on chocolate, lollipops, jelly beans, gummy bears and more!",
+        "type": "Food",
+        "img_url": "static\\prize_cfa_img.png",
+        "credits": 50
+    },
+    {
+        "name": "School T-Shirt",
+        "desc": "Rock your school pride with this 100% cotton totally not slave labored shirt!",
+        "type": "Spirit",
+        "img_url": "static\\prize_spirit_img.png",
+        "credits": 250
+    },
+    {
+        "name": "School Spirit Sticker Pack",
+        "desc": "Showcase your love for you school with this five pack of spirit stickers!",
+        "type": "Spirit",
+        "img_url": "static\\prize_spirit_img.png",
+        "credits": 75
+    }
+]
