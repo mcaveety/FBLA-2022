@@ -4,6 +4,11 @@ prizes_path = r"data\prizes.json"
 
 
 def add_prize(file_path=prizes_path):
+	"""
+	Adds new prize to database
+	:param file_path:
+	:return: None
+	"""
 	new_prize = {
 		'name': input("name:"),
 		'desc': input("desc:"),
@@ -11,9 +16,5 @@ def add_prize(file_path=prizes_path):
 		'img_url': rf"static\{input('url:')}",
 		'credits': int(input("credits:"))
 	}
+
 	write_file(file_path, new_prize)
-
-
-def get_prizes(file_path=prizes_path):
-	return open_file(file_path)
-

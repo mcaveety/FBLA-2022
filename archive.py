@@ -14,6 +14,7 @@ def archive_file(session, file_path=users_path):
 	"""
 	archive_path = update_toc()
 	data = users.assign_winners()
+
 	with open(archive_path, 'x') as file:
 		json.dump(data, file, indent=4)
 
@@ -38,11 +39,19 @@ def archive_file(session, file_path=users_path):
 
 
 def initialize_toc(file_path=archive_toc_path):
+	"""
+	Set up the archive table of contents
+	:param file_path: rstr
+	:return: None
+	"""
 	toc = open_file(file_path)
+
 	try:
 		toc = toc[0]
+
 	except IndexError:
 		toc = {}
+
 	current_q = toc.get('current_q', 1)
 	current_year = toc.get('current_year', 2020)
 	current_qy = f"Q{current_q}{current_year}"
@@ -52,6 +61,7 @@ def initialize_toc(file_path=archive_toc_path):
 		'current_qy': current_qy
 	})
 	toc = [toc]
+
 	with open(file_path, 'w') as file:
 		json.dump(toc, file, indent=4)
 
@@ -72,8 +82,10 @@ def update_toc(file_path=archive_toc_path):
 	if current_q == 2:
 		current_q += 1
 		current_year += 1
+
 	elif current_q == 4:
 		current_q = 1
+
 	else:
 		current_q += 1
 
@@ -85,6 +97,7 @@ def update_toc(file_path=archive_toc_path):
 		f'{archive_qy}': archive_new_path
 	})
 	toc = [toc]
+
 	with open(file_path, 'w') as file:
 		json.dump(toc, file, indent=4)
 
@@ -92,8 +105,14 @@ def update_toc(file_path=archive_toc_path):
 
 
 def collect_paths(file_path=archive_toc_path):
+	"""
+	Yields all archived file paths
+	:param file_path: rstr
+	:return: Generator
+	"""
 	initialize_toc()
 	toc = open_file(file_path)[0]
+
 	for key in toc:
 		if key == 'current_q' or key == 'current_year':
 			continue

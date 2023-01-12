@@ -74,6 +74,7 @@ def events_page():
                     event=events_data[int(request.args['num'])],
                     confirm_error=confirm_error
                 )
+
         return render_template("events.html", events_data=events_data)
 
     # Checks if attendance was confirmed
@@ -96,15 +97,20 @@ def events_page():
 @check_session()
 def leaderboard_page():
     file_path = users.users_path
+
     if request.method == "POST":
         if request.form['btn'] == "Archive":
             user_info = archive.archive_file(session)
+
             for key in user_info:
                 session[key] = user_info[key]
+
         elif request.form['btn'] == "Select":
             file_path = request.form.get('select_qy')
+
     users_data = users.sort_leaderboard(file_path=file_path)
     qy_list = list(archive.collect_paths())
+
     return render_template("leaderboard.html", users_data=users_data, qy_list=qy_list)
 
 
@@ -152,8 +158,11 @@ def login_page():
         # User tries to sign up
         elif request.form['btn'] == "Sign Up":
             new_user_info = {}
+
             for element_name, value in request.form.items():
                 new_user_info[element_name] = value
+
+            # Removes unneeded key
             new_user_info.pop('btn')
 
             # If student number is new, sign up
@@ -172,7 +181,8 @@ def login_page():
 @app.route("/prizes", methods=["GET", "POST"])
 @check_session()
 def prizes_page():
-    prizes_list = prizes.get_prizes()
+    prizes_list = users.open_file(prizes.prizes_path)
+
     if request.method == "GET":
         error = request.args.get('error', "")
         message = request.args.get('message', "")
@@ -190,6 +200,7 @@ def prizes_page():
 
             # random 6 digit code generator from https://stackoverflow.com/a/47504953
             redeem_code = f'Present redemption code #{random.randrange(1, 10**6):06} to a school administrator to receive your prize!'
+
             return redirect(url_for('prizes_page', message=redeem_code))
 
 

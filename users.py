@@ -5,7 +5,7 @@ users_path = r"data\users.json"
 events_path = r"data\events.json"
 
 
-def open_file(file_path=users_path):
+def open_file(file_path):
     """
     Opens a file and returns the data
     :param file_path: rstr
@@ -27,6 +27,7 @@ def write_file(file_path, changes):
     :return: None
     """
     data = open_file(file_path)
+
     with open(file_path, 'w') as file:
         data.append(changes)
         json.dump(data, file, indent=4)
@@ -41,7 +42,9 @@ def update_user(file_path, student_num, changes):
     :return: None
     """
     data = open_file(file_path)
+
     with open(file_path, 'w') as file:
+
         for i, student in enumerate(data):
             if student_num == student['student_number']:
                 data.pop(i)
@@ -94,16 +97,21 @@ def get_points(event_data, event_num):
     :file_path: rstr
     :return: None
     """
-    # Load both files
     for event in event_data:
         if event_num == event['num']:
             return event['points']
 
 
 def assign_winners(file_path=users_path):
+    """
+    Assigns a top winner overall, and a random winner per grade level
+    :param file_path:
+    :return: dict
+    """
     user_data = open_file(file_path)
     top_user = user_data[0]
     pos = 0
+
     for i in range(len(user_data)):
         if user_data[i]['points'] > top_user['points']:
             top_user = user_data[i]
@@ -112,14 +120,17 @@ def assign_winners(file_path=users_path):
 
     grade_levels = ["9", "10", "11", "12"]
     winners_index_list = []
+
     for i in range(len(grade_levels)):
         temp_list = []
         grade_level = grade_levels[i]
+
         for i, user in enumerate(user_data):
             if user.get('winner', None):
                 continue
             elif grade_level == user['grade_level']:
                 temp_list.append(i)
+
         if len(temp_list) > 0:
             print(temp_list)
             winners_index_list.append(temp_list[random.randrange(0, len(temp_list))])
@@ -127,8 +138,8 @@ def assign_winners(file_path=users_path):
     for i, user in enumerate(user_data):
         if i in winners_index_list:
             user['winner'] = True
-    return user_data
 
+    return user_data
 
 
 def check_user(student_number):
@@ -138,6 +149,7 @@ def check_user(student_number):
     :return: bool
     """
     users_data = open_file(users_path)
+
     for user in users_data:
         if user['student_number'] == student_number:
             return True
@@ -164,11 +176,18 @@ def add_user(new_user_info):
 
 
 def sort_leaderboard(file_path=users_path):
+    """
+    Sorts leaderboard from highest to lowest points
+    :param file_path:
+    :return: list
+    """
     user_data = open_file(file_path)
     sorted_data = []
+
     for i in range(len(user_data)):
         pos = 0
         top_user = user_data[0]
+
         for j in range(len(user_data)):
             if user_data[j]['points'] > top_user['points']:
                 top_user = user_data[j]
@@ -185,6 +204,7 @@ def lookup_user(student_number):
     :return: dict
     """
     users_data = open_file(users_path)
+
     for user in users_data:
         if user['student_number'] == student_number:
             return user
