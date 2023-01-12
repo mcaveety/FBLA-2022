@@ -6,6 +6,7 @@ from functools import wraps
 import users
 import events
 import archive
+import prizes
 
 
 # Allows environment variables to be accessed
@@ -130,6 +131,11 @@ def login_page():
             # If account exists, login
             if users.check_user(request.form.get('student_number')):
                 session['student_number'] = request.form.get('student_number')
+                user_info = users.lookup_user(session['student_number'])
+
+                for key in user_info:
+                    session[key] = user_info[key]
+
                 return redirect(url_for('dashboard_page'))
 
             # If account doesn't exist, display error
@@ -162,7 +168,20 @@ def login_page():
 @app.route("/prizes", methods=["GET", "POST"])
 @check_session()
 def prizes_page():
-    return render_template("prizes.html")
+    prizes_list = prizes.get_prizes()
+    if request.method == "GET":
+        message = request.args.get('error', "")
+        return render_template("prizes.html", prizes=prizes_list, message=message)
+    if request.method == "POST":
+        credits_cost = int(request.form.get('prize_select'))
+        if credits_cost > session['credits']:
+            return redirect(url_for(
+                'prizes_page',
+                message=f"Insufficient point balance. You need {credits_cost - session['credits']} more points.")
+            )
+        else:
+            session['credits'] -= credits_cost
+        return render_template("prizes.html", prizes=prizes_list)
 
 
 # Error Handler code from

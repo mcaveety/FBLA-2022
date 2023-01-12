@@ -7,6 +7,27 @@
 <!-- Picks up where base.html left off -->
 {% block content %}
 
-<p>Prizes coming soon</p>
+<h2>Prizes</h2>
+
+<h4>Your credits: {{ session['credits'] }}</h4>
+
+<h4>{{ message }}</h4>
+
+<form method="post">
+    {% for prize in prizes %}
+<div>
+    <img src="{{ prize['img_url'] }}">
+    {{ prize['name'] }}<br>
+    {{ prize['desc'] }}<br>
+    Type: {{ prize['type'] }}<br>
+    <label>
+        <input type="radio" name="prize_select" value="{{ prize['credits'] }}">
+            Credits: {{ prize['credits'] }}<br>
+
+    </label>
+</div>
+{% endfor %}
+    <input type="submit" name="btn">
+</form>
 
 {% endblock %}
