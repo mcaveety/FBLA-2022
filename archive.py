@@ -7,7 +7,7 @@ users_path = r"data\users.json"
 archive_toc_path = r"data\archive_toc.json"
 
 
-def archive_file(file_path=users_path):
+def archive_file(session, file_path=users_path):
 	"""
 	Archives current leaderboard data
 	:return: None
@@ -21,6 +21,8 @@ def archive_file(file_path=users_path):
 		if user.get('winner', None):
 			user.pop('winner')
 			user['credits'] = user['points']
+		else:
+			user['credits'] = 0
 		user.update({
 			'points': 0,
 			'num_attended': 0,
@@ -29,6 +31,10 @@ def archive_file(file_path=users_path):
 
 	with open(file_path, 'w') as file:
 		json.dump(data, file, indent=4)
+
+	for user in data:
+		if user['student_number'] == session['student_number']:
+			return user
 
 
 def initialize_toc(file_path=archive_toc_path):
