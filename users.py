@@ -121,7 +121,7 @@ def assign_winners(file_path=users_path):
             elif grade_level == user['grade_level']:
                 temp_list.append(i)
         if len(temp_list) > 0:
-            winners_index_list.append(temp_list[random.randint(0, len(temp_list))])
+            winners_index_list.append(temp_list[random.choice(temp_list)])
 
     for i, user in enumerate(user_data):
         if i in winners_index_list:
