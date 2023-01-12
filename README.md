@@ -12,3 +12,10 @@ Develop a program which will help improve student involvement at your school. Th
 - Data must be stored persistently. Storage may be in a relational database, a document-oriented NoSQL database, flat text files, flat JSON, or XML files.
 - The user interface must be a GUI with a minimum of five different control types including such things as drop-down lists, text fields, checkboxes, date picker, or other relevant control types.
 - All data entry must be validated with appropriate user notification and error messages including the use of required fields.
+
+***
+
+## Code, Icons, and other Resources
+
++ Random 6-digit code generator from <https://stackoverflow.com/a/47504953>
++ Icons from <https://fonts.google.com/icons>
