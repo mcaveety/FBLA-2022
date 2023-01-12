@@ -15,20 +15,21 @@
 <h4>{{ error }}</h4>
 
 <form method="post">
-    {% for prize in prizes %}
-<div>
-    <img src="{{ prize['img_url'] }}">
-    {{ prize['name'] }}<br>
-    {{ prize['desc'] }}<br>
-    Type: {{ prize['type'] }}<br>
-    <label>
-        <input type="radio" name="prize_select" value="{{ prize['credits'] }}">
-            Credits: {{ prize['credits'] }}<br>
 
-    </label>
-</div>
-{% endfor %}
-    <input type="submit" name="btn">
+    {% for prize in prizes %}
+    <div>
+        <img src="{{ prize['img_url'] }}">
+        {{ prize['name'] }}<br>
+        {{ prize['desc'] }}<br>
+        Type: {{ prize['type'] }}<br>
+        <label>
+            <input type="radio" name="prize_select" value="{{ prize['credits'] }}">
+                Credits: {{ prize['credits'] }}<br>
+        </label>
+    </div>
+    {% endfor %}
+        <input type="submit" name="btn">
+
 </form>
 
 {% endblock %}

@@ -7,8 +7,8 @@
 <!-- Picks up where base.html left off -->
 {% block content %}
 
-
 <table>
+
     <tr>
         <th>Position</th>
         <th>First Name</th>
@@ -36,17 +36,21 @@
 </table>
 
 <form name="archive" method="post">
+
     <input type="submit" name="btn" value="Archive">
 
 </form>
 
 <form name="qy_form" method="post">
+
     <select id="select_qy" name="select_qy">
         {% for item in qy_list %}
-        <option value="{{ item[1] }}">{{ item[0] }}</option>
+            <option value="{{ item[1] }}">{{ item[0] }}</option>
         {% endfor %}
     </select>
+
     <input type="submit" name="btn" value="Select">
+
 </form>
 
 

@@ -13,6 +13,7 @@
     Date: {{ event['date'] }}<br>
     Time: {{ event['time'] }}
 </p>
+
 <form method="post">
     <input type="checkbox" id="confirm_attend" name="confirm_attend">
     <label for="confirm_attend">I certify I attended this event</label>
@@ -22,9 +23,9 @@
 <p>{{ confirm_error }}</p>
 
 <a href="{{ url_for('events_page') }}">
-<button>
-Back to Events
-</button>
+    <button>
+        Back to Events
+    </button>
 </a>
 
 {% endblock %}
