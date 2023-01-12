@@ -1,9 +1,7 @@
 [
     {
-        "current_q": 3,
-        "current_year": 2021,
-        "current_qy": "Q32021",
-        "Q12020": "data\\users_Q12020.json",
-        "Q22020": "data\\users_Q22020.json"
+        "current_q": 1,
+        "current_year": 2020,
+        "current_qy": "Q12020"
     }
 ]

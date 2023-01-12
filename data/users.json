@@ -1,19 +1,51 @@
 [
     {
+        "first_name": "Ned",
+        "last_name": "bayou",
+        "student_number": "435645",
+        "grade_level": "10",
+        "points": 0,
+        "num_attended": 0,
+        "events_attended": [],
+        "credits": 0
+    },
+    {
+        "first_name": "Sarah",
+        "last_name": "McAveety",
+        "student_number": "123456",
+        "grade_level": "10",
+        "points": 0,
+        "num_attended": 0,
+        "events_attended": [],
+        "credits": 0
+    },
+    {
+        "first_name": "ethan",
+        "last_name": "irons clothes",
+        "student_number": "1234",
+        "grade_level": "10",
+        "points": 0,
+        "num_attended": 0,
+        "events_attended": [],
+        "credits": 150
+    },
+    {
         "first_name": "Michelle",
         "last_name": "McAveety",
         "student_number": "4697364",
-        "grade_level": "9",
+        "grade_level": "12",
         "points": 0,
         "num_attended": 0,
-        "events_attended": []
+        "events_attended": [],
+        "credits": 75
     },
     {
-        "first_name": "Ned",
-        "last_name": "bayou",
-        "student_number": "123456",
-        "grade_level": "9",
+        "first_name": "ee",
+        "last_name": "ee",
+        "student_number": "3453434",
+        "grade_level": "12",
         "points": 0,
+        "credits": 0,
         "num_attended": 0,
         "events_attended": []
     }
