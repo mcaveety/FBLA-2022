@@ -7,6 +7,7 @@ import users
 import events
 import archive
 import prizes
+import random
 
 
 # Allows environment variables to be accessed
@@ -96,7 +97,9 @@ def leaderboard_page():
     file_path = users.users_path
     if request.method == "POST":
         if request.form['btn'] == "Archive":
-            archive.archive_file()
+            user_info = archive.archive_file(session)
+            for key in user_info:
+                session[key] = user_info[key]
         elif request.form['btn'] == "Select":
             file_path = request.form.get('select_qy')
     users_data = users.sort_leaderboard(file_path=file_path)
@@ -170,18 +173,23 @@ def login_page():
 def prizes_page():
     prizes_list = prizes.get_prizes()
     if request.method == "GET":
-        message = request.args.get('error', "")
-        return render_template("prizes.html", prizes=prizes_list, message=message)
+        error = request.args.get('error', "")
+        message = request.args.get('message', "")
+        return render_template("prizes.html", prizes=prizes_list, error=error, message=message)
+
     if request.method == "POST":
         credits_cost = int(request.form.get('prize_select'))
         if credits_cost > session['credits']:
             return redirect(url_for(
                 'prizes_page',
-                message=f"Insufficient point balance. You need {credits_cost - session['credits']} more points.")
+                error=f"Insufficient point balance. You need {credits_cost - session['credits']} more points.")
             )
         else:
             session['credits'] -= credits_cost
-        return render_template("prizes.html", prizes=prizes_list)
+
+            # random 6 digit code generator from https://stackoverflow.com/a/47504953
+            redeem_code = f'Present redemption code #{random.randrange(1, 10**6):06} to a school administrator to receive your prize!'
+            return redirect(url_for('prizes_page', message=redeem_code))
 
 
 # Error Handler code from
