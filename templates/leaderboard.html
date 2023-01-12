@@ -13,6 +13,7 @@
         <th>Position</th>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Grade Level</th>
         <th>Events Attended</th>
         <th>Points</th>
         <th>Winner</th>
@@ -24,6 +25,7 @@
         <td>{{ loop.index }}</td>
         <td>{{ student['first_name'] }}</td>
         <td>{{ student['last_name'] }}</td>
+        <td>{{ student['grade_level'] }}</td>
         <td>{{ student['num_attended'] }}</td>
         <td>{{ student['points'] }}</td>
         <td>{{ student.get('winner', "") }}</td>
