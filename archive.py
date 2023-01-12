@@ -18,13 +18,14 @@ def archive_file(file_path=users_path):
 		json.dump(data, file, indent=4)
 
 	for user in data:
+		if user.get('winner', None):
+			user.pop('winner')
+			user['credits'] = user['points']
 		user.update({
 			'points': 0,
 			'num_attended': 0,
 			'events_attended': []
 		})
-		if user.get('winner', None):
-			user.pop('winner')
 
 	with open(file_path, 'w') as file:
 		json.dump(data, file, indent=4)
