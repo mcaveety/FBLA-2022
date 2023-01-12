@@ -19,3 +19,4 @@ Develop a program which will help improve student involvement at your school. Th
 
 + Random 6-digit code generator from <https://stackoverflow.com/a/47504953>
 + Icons from <https://fonts.google.com/icons>
++ Error handler code from <https://flask.palletsprojects.com/en/1.0.x/patterns/errorpages/>
