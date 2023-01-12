@@ -6,6 +6,23 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
+## 1/11/23
+
++ Finished project requirements
++ Add prizes page complete with prize selection and error messages when users have insufficient credits
++ Added grade level to leaderboard
++ Added credit system where users who win during a previous quarter are granted credits to spend during the next quarter corresponding to their point balance
++ Began planning additional changes
+  + Admin vs student accounts
+  + Creating events on admin account
+  + Informational page with information on how to use the website
+  + CSS to beautify the project
+  + Display attended events on dashboard page
+  + Save redemption codes to user account
+  + Beautify code
+
+***
+
 ## 1/10/23
 
 + Sorted leaderboards by point value
@@ -84,14 +101,14 @@ This page will be updated as new changes are decided upon to showcase the design
 
 __The following features were considered based on specific criteria from the project rubric.__
 
-- [ ] *"You must have a way to pick a random winner each quarter from each grade level, as well as the student with the top point accumulation."*
+- [x] *"You must have a way to pick a random winner each quarter from each grade level, as well as the student with the top point accumulation."*
 + A student who wins for having the most points during a specific quarter will get an attribute on their profile stating their victory, i.e., "Top tracker Q1-22". Possible 2nd and 3rd place prizes could be offered. Consider picking the top person per grade level (ex. a senior had the most points overall, but in a different grade level, reward the top accumulator)
 + Students are chosen at random from each grade level to win if they participate with at least X number of points. One per grade level (4 total).
 
-- [ ] *"The number of points a person has accumulated will translate to the prize they win."*
+- [x] *"The number of points a person has accumulated will translate to the prize they win."*
 + Students who win randomly will be able to cash in their points for different prizes. If a student does not have enough points they cannot select locked prizes.
 
-- [ ] *"You will need to have at least three prizes (a school reward, a food reward, and a school spirit item).*"
+- [x] *"You will need to have at least three prizes (a school reward, a food reward, and a school spirit item).*"
 + School rewards: Tardy excuse, Skip the lunch line, be an administrator for a day... revisit ideas later
 + Food rewards: Chick-Fil-A lunch (a typical offer for being an Honors student), free a-la-carte item from the cafeteria, candy bag
 + School Spirit Item: School spirit hoodie, t-shirt, lanyards, stickers
@@ -114,17 +131,17 @@ __The following features were considered based on specific criteria from the pro
 + A leaderboard can be visible at all times with optional grade level filters to help students view their progress
 + TBD: How can students view a "final" copy of their rankings? Should there be a special page to show statistics (Ex. archives of Q1, Q2, etc. data with top events and students? A page to view current quarter statistics?
 
-- [ ] ~~*"Data must be stored persistently. Storage may be in a relational database, a document-oriented NoSQL database, flat text files, flat JSON, or XML files."*~~
+- [x] *"Data must be stored persistently. Storage may be in a relational database, a document-oriented NoSQL database, flat text files, flat JSON, or XML files."*
 + This will be revisited at a later date. Consider using flat JSON files for general data.
 + How will account login info be stored?
 
-- [ ] ~~*"The user interface must be a GUI with a minimum of five different control types including such things as drop-down lists, text fields, checkboxes, date picker, or other relevant control types."*~~
+- [x] *"The user interface must be a GUI with a minimum of five different control types including such things as drop-down lists, text fields, checkboxes, date picker, or other relevant control types."*
 + Text box: For inputting event attendance validation, username, password, search fields, etc.
 + Drop-down menu: Filtering by grade level in leaderboard
 + Checkboxes: Prize page filter (show school rewards, food rewards, and school spirit items in a custom combination)
 + Other types can be determined at a later date
 
-- [ ] *"All data entry must be validated with appropriate user notification and error messages including the use of required fields."*
+- [x] *"All data entry must be validated with appropriate user notification and error messages including the use of required fields."*
 + This can be used for word count minimums, password length requirements, and error messages when a username or student number is already in use
 
 [^1]: https://flask.palletsprojects.com/en/2.2.x/
