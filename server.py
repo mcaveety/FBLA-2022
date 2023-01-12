@@ -1,14 +1,15 @@
 import os
+import random
+from functools import wraps
+
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_session import Session
-from functools import wraps
-import users
-import events
-import archive
-import prizes
-import random
 
+import archive
+import events
+import prizes
+import users
 
 # Allows environment variables to be accessed
 load_dotenv()

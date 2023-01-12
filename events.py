@@ -1,4 +1,5 @@
 import json
+
 from users import open_file, write_file
 
 events_path = r"data\events.json"

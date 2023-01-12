@@ -1,7 +1,7 @@
 import json
 
 import users
-from users import open_file, write_file
+from users import open_file
 
 users_path = r"data\users.json"
 archive_toc_path = r"data\archive_toc.json"

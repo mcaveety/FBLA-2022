@@ -1,4 +1,3 @@
-import json
 from users import open_file, write_file
 
 prizes_path = r"data\prizes.json"
