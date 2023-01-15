@@ -1,0 +1,48 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #FFF;
+    background-color: #6d95a8;
+    margin: 0;
+}
+
+header {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #05405c;
+    margin: 0;
+}
+
+div {
+    padding: 0 20px;
+    height: 80px;
+}
+
+.left_header {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+button, input[type=submit] {
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #05405c;
+    background-color: #FFFFFF;
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.error_display {
+    padding: 15px;
+    color: darkred;
+}

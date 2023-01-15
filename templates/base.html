@@ -1,6 +1,6 @@
 <!--
 Flask used to render HTML templates (see server.py)
-Jinja2 used to execute Python inside of templates (surrounded by {% %} or {{}} in code)
+Jinja2 used to execute Python inside of templates
 Jinja2 also connects HTML files together (ex. base.html & login.html)
 -->
 <!DOCTYPE html>
@@ -8,11 +8,18 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}TrackPack{% endblock %}</title>
+    <link rel="stylesheet" href="static\stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
 </head>
 <body>
-    <h2>TrackPack</h2>
-    <h4>For tracking your school activities</h4>
+    <header class="header-title">
+        <div class="left_header">
+            <p>TrackPack</p>
+        </div>
+    </header>
 
+    <div>
+    <h4>For tracking your school activities</h4>
     {% if session['student_number'] %}
 
     <p>{{ session['student_number'] }}</p>
@@ -37,11 +44,14 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
 
     {% endif %}
 
-{% block content %}
+
+    {% block content %}
 
     <p>Basic website info here</p>
 
 {% endblock %}
+
+    </div>
 
 </body>
 </html>
