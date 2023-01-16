@@ -10,44 +10,53 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
     <title>{% block title %}TrackPack{% endblock %}</title>
     <link rel="stylesheet" href="static\stylesheet.css">
     <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/static/backpack_img.png">
 </head>
 <body>
     <header class="header-title">
+        <a href="{{ url_for('splash_page') }}">
         <div class="left_header">
+            <img src="/static/backpack_img.png" alt="Home">
             <p>TrackPack</p>
         </div>
+        </a>
+        <div class="right_header">
+        <button>Log In</button>
+        <a href="{{ url_for('dashboard_page') }}"><img src="/static/account_img.png" alt="Account"></a>
+        </div>
+
+    {% if session['student_number'] %}
+        <div class="center_header">
+            <a href="{{ url_for('events_page') }}">
+                <button>Events</button>
+            </a>
+
+            <a href="{{ url_for('leaderboard_page') }}">
+                <button>Leaderboard</button>
+            </a>
+
+            <a href="{{ url_for('reset_session') }}">
+                <button>Log Out</button>
+            </a>
+                </div>
+            {% endif %}
+
     </header>
 
     <div>
-    <h4>For tracking your school activities</h4>
-    {% if session['student_number'] %}
-
-    <p>{{ session['student_number'] }}</p>
-
-    <a href="{{ url_for('events_page') }}">
-        <button>Events</button>
-    </a>
-
-    <a href="{{ url_for('leaderboard_page') }}">
-        <button>Leaderboard</button>
-    </a>
-
-    <a href="{{ url_for('reset_session') }}">
-        <button>Log Out</button>
-    </a>
-
-    {% else %}
-
-    <a href="{{ url_for('login_page') }}">
-        <button>Log In</button>
-    </a>
-
-    {% endif %}
 
 
     {% block content %}
-
-    <p>Basic website info here</p>
+<div class="center">
+    <h2>Welcome to TrackPack!</h2>
+    <p>TrackPack can be used to earn points for every school event that you attend.</p>
+    <ul style="display: inline-block; text-align: left;">
+        <li>Dashboard displays your tracking progress</li>
+        <li>Events page features all of your school's activities</li>
+        <li>Leaderboard page shows the top students at your school</li>
+        <li>Redeem credits for prizes if you win in the previous quarter!</li>
+    </ul>
+</div>
 
 {% endblock %}
 

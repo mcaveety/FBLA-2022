@@ -1,5 +1,8 @@
-body {
+* {
     font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
     color: #FFF;
     background-color: #6d95a8;
     margin: 0;
@@ -24,6 +27,31 @@ div {
     align-items: center;
 }
 
+.center_header {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    float: contour;
+}
+
+.center_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.right_header {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
+}
+
+
 button, input[type=submit] {
     border-radius: 10px;
     border-width: 3px;
@@ -40,9 +68,19 @@ button, input {
 
 a {
     text-decoration: none;
+    color: #f0f9ff;
 }
 
 .error_display {
     padding: 15px;
     color: darkred;
 }
+
+tbody {
+    padding: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: #FFFFFF;
+}
+
