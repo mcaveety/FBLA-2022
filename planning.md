@@ -6,6 +6,19 @@ This page will be updated as new changes are decided upon to showcase the design
 
 ***
 
+## 1/15/23
+
++ Update CSS
++ Update icons
+
+***
+
+## 1/14/23
+
++ CSS for website aesthetics begun
+
+***
+
 ## 1/11/23
 
 + Finished project requirements
