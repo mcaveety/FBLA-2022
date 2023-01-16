@@ -17,7 +17,7 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
     <header>
 
         <a href="{{ url_for('splash_page') }}">
-            <div class="header_item">
+            <div class="header_item header_item_left">
                 <img src="/static/backpack_img.png" alt="Home">TrackPack
             </div>
         </a>
@@ -37,7 +37,7 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
         </div>
 
         <a href="{{ url_for('dashboard_page') }}">
-            <div class="header_item">
+            <div class="header_item header_item_right">
                 <img src="/static/account_img.png" alt="Account">
             </div>
         </a>
