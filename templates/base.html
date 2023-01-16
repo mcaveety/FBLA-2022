@@ -13,54 +13,56 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
     <link rel="icon" type="image/x-icon" href="/static/backpack_img.png">
 </head>
 <body>
-    <header class="header-title">
-        <a href="{{ url_for('splash_page') }}">
-        <div class="left_header">
-            <img src="/static/backpack_img.png" alt="Home">
-            <p>TrackPack</p>
-        </div>
-        </a>
-        <div class="right_header">
-        <button>Log In</button>
-        <a href="{{ url_for('dashboard_page') }}"><img src="/static/account_img.png" alt="Account"></a>
-        </div>
 
-    {% if session['student_number'] %}
-        <div class="center_header">
+    <header>
+
+        <a href="{{ url_for('splash_page') }}">
+            <div class="header_item">
+                <img src="/static/backpack_img.png" alt="Home">TrackPack
+            </div>
+        </a>
+
+        <div class="header_item">
             <a href="{{ url_for('events_page') }}">
-                <button>Events</button>
+                <button class="button_header">Events</button>
             </a>
 
             <a href="{{ url_for('leaderboard_page') }}">
-                <button>Leaderboard</button>
+                <button class="button_header">Leaderboard</button>
             </a>
 
             <a href="{{ url_for('reset_session') }}">
-                <button>Log Out</button>
+                <button class="button_header">Log Out</button>
             </a>
-                </div>
-            {% endif %}
+        </div>
+
+        <a href="{{ url_for('dashboard_page') }}">
+            <div class="header_item">
+                <img src="/static/account_img.png" alt="Account">
+            </div>
+        </a>
 
     </header>
 
-    <div>
-
-
     {% block content %}
-<div class="center">
-    <h2>Welcome to TrackPack!</h2>
-    <p>TrackPack can be used to earn points for every school event that you attend.</p>
-    <ul style="display: inline-block; text-align: left;">
-        <li>Dashboard displays your tracking progress</li>
-        <li>Events page features all of your school's activities</li>
-        <li>Leaderboard page shows the top students at your school</li>
-        <li>Redeem credits for prizes if you win in the previous quarter!</li>
-    </ul>
-</div>
 
-{% endblock %}
-
+    <div class="center">
+        <h2>Welcome to TrackPack!</h2>
+        <p>TrackPack can be used to earn points for every school event that you attend.</p>
+        <ul style="display: inline-block; text-align: left;">
+            <li>Dashboard displays your tracking progress</li>
+            <li>Events page features all of your school's activities</li>
+            <li>Leaderboard page shows the top students at your school</li>
+            <li>Redeem credits for prizes if you win in the previous quarter!</li>
+        </ul>
+        <br>
+        <a href="{{ url_for('login_page') }}">
+            <button class="center">Log In</button>
+        </a>
     </div>
+
+    {% endblock %}
+
 
 </body>
 </html>

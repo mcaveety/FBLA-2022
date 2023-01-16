@@ -1,5 +1,17 @@
+/*
+Font 'Source Sans Pro' from Google Fonts
+https://fonts.google.com/
+ */
 * {
     font-family: "Source Sans Pro", sans-serif;
+}
+
+
+/* Elements */
+
+a {
+    text-decoration: none;
+    color: #f0f9ff;
 }
 
 body {
@@ -8,72 +20,35 @@ body {
     margin: 0;
 }
 
-header {
-    color: #FFF;
-    font-size: 40px;
-    font-weight: bold;
-    background-color: #05405c;
-    margin: 0;
+button, input {
+    cursor: pointer;
 }
-
-div {
-    padding: 0 20px;
-    height: 80px;
-}
-
-.left_header {
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.center_header {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    float: contour;
-}
-
-.center_div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.center {
-    text-align: center;
-}
-
-.right_header {
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
-    float: right;
-}
-
 
 button, input[type=submit] {
     border-radius: 10px;
     border-width: 3px;
     border-color: #05405c;
+    border-style: solid;
     background-color: #FFFFFF;
     font-family: "Source Sans Pro", sans-serif;
     margin: 10px;
     padding: 5px 10px;
 }
 
-button, input {
-    cursor: pointer;
+div {
+
 }
 
-a {
-    text-decoration: none;
-    color: #f0f9ff;
-}
-
-.error_display {
-    padding: 15px;
-    color: darkred;
+header {
+    color: #FFF;
+    background-color: #05405c;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 tbody {
@@ -82,5 +57,45 @@ tbody {
     border-radius: 5px;
     border-width: 3px;
     border-color: #FFFFFF;
+}
+
+
+/* Classes */
+
+.button_header {
+    border-color: #6d95a8;
+}
+
+.center {
+    text-align: center;
+}
+
+.center_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_display {
+    padding: 15px;
+    color: darkred;
+}
+
+.header_item {
+    padding: 15px 20px;
+    max-height: 90px;
+    text-align: center;
+}
+
+.header_item button {
+    vertical-align: middle;
+}
+.header_item img {
+    float: left;
+    vertical-align: middle;
+}
+
+.header_item h1 {
+    position: relative;
 }
 
