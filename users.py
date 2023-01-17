@@ -33,7 +33,7 @@ def write_file(file_path, changes):
         json.dump(data, file, indent=4)
 
 
-def update_user(file_path, student_num, changes):
+def update_user(student_num, changes, file_path=users_path):
     """
     Updates a user's attended events & point total
     :param file_path: rstr
@@ -86,7 +86,7 @@ def add_attended(student_num, event_num, users_fpath=users_path, events_fpath=ev
 
             student['events_attended'] = events_attended
 
-            update_user(users_fpath, student_num, student)
+            update_user(student_num, student, users_fpath)
             break
 
 
