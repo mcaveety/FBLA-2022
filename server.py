@@ -99,7 +99,7 @@ def leaderboard_page():
     file_path = users.users_path
 
     if request.method == "POST":
-        if request.form['btn'] == "Archive":
+        if request.form['btn'] == "Archive Current Quarter":
             user_info = archive.archive_file(session)
 
             for key in user_info:
@@ -189,14 +189,22 @@ def prizes_page():
         return render_template("prizes.html", prizes=prizes_list, error=error, message=message)
 
     if request.method == "POST":
-        credits_cost = int(request.form.get('prize_select'))
+        try:
+            credits_cost = int(request.form.get('prize_select'))
+        except TypeError:
+            return redirect(url_for('prizes_page', error="Please select a prize."))
+
         if credits_cost > session['credits']:
             return redirect(url_for(
                 'prizes_page',
                 error=f"Insufficient point balance. You need {credits_cost - session['credits']} more points.")
             )
         else:
+            # Updates user's credit total
             session['credits'] -= credits_cost
+            user = users.lookup_user(session['student_number'])
+            user['credits'] = session['credits']
+            users.update_user(session['student_number'], user)
 
             # random 6 digit code generator from https://stackoverflow.com/a/47504953
             redeem_code = f'Present redemption code #{random.randrange(1, 10**6):06} to a school administrator to receive your prize!'
