@@ -61,12 +61,26 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
         </ul>
         <br>
         <a href="{{ url_for('login_page') }}">
-            <button class="center">Log In</button>
+            <button class="center">Log In / Sign Up</button>
         </a>
     </div>
 
+    <div class="center">
+        <p>Source of Information:</p>
+        <ul style="display: inline-block; text-align: left;">
+            <li><a href="https://docs.python.org/3/" target="_blank">Official Python Documentation</a></li>
+            <li><a href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank">Official Flask Documentation</a></li>
+            <li><a href="https://jinja.palletsprojects.com/en/3.1.x/" target="_blank">Official Jinja Documentation</a></li>
+            <li><a href="https://fonts.google.com/" target="_blank">Source Sans Pro font from Google Open Source Fonts</a></li>
+            <li><a href="https://fonts.google.com/icons" target="_blank">All iconography from Google Open Source Fonts</a></li>
+            <li><a href="https://stackoverflow.com/a/47504953" target="_blank">Random 6-digit code generator in server.py</a></li>
+            <li><a href="https://flask.palletsprojects.com/en/1.0.x/patterns/errorpages/" target="_blank">Error handler code in server.py</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <h3><a href="https://github.com/meepowlz/FBLA-2022" target="_blank">GitHub Repository</h3>
+    </div>
     {% endblock %}
-
 
 </body>
 </html>

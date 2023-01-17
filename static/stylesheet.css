@@ -52,6 +52,11 @@ h3 {
     padding: 0;
 }
 
+h3 a {
+    text-decoration: underline;
+    color: #05405c;
+}
+
 header {
     color: #FFF;
     background-color: #05405c;
@@ -75,6 +80,11 @@ input[type=checkbox] {
 label {
     font-size: 20px;
     vertical-align: middle;
+}
+
+li a {
+    text-decoration: underline;
+    color: #05405c;
 }
 
 table {
