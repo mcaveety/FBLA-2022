@@ -1,8 +1,9 @@
 import json
 
+import users
 from users import open_file, write_file
 
-events_path = r"data\events.json"
+events_path = users.resource_path(r"data\events.json")
 
 
 # Used to initially format event data

@@ -3,8 +3,8 @@ import json
 import users
 from users import open_file
 
-users_path = r"data\users.json"
-archive_toc_path = r"data\archive_toc.json"
+users_path = users.resource_path(r"data\users.json")
+archive_toc_path = users.resource_path(r"data\archive_toc.json")
 
 
 def archive_file(session, file_path=users_path):

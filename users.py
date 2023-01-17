@@ -1,8 +1,23 @@
 import json
 import random
+import sys
+import os
 
-users_path = r"data\users.json"
-events_path = r"data\events.json"
+
+# From https://stackoverflow.com/a/13790741
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+    # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
+users_path = resource_path(r"data\users.json")
+events_path = resource_path(r"data\events.json")
 
 
 def open_file(file_path):

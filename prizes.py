@@ -1,6 +1,7 @@
-from users import open_file, write_file
+import users
+from users import write_file
 
-prizes_path = r"data\prizes.json"
+prizes_path = users.resource_path(r"data\prizes.json")
 
 
 def add_prize(file_path=prizes_path):
