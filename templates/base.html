@@ -31,6 +31,10 @@ Jinja2 also connects HTML files together (ex. base.html & login.html)
                 <button class="button_header">Leaderboard</button>
             </a>
 
+            <a href="{{ url_for('prizes_page') }}">
+                <button class="button_header">Prizes</button>
+            </a>
+
             <a href="{{ url_for('reset_session') }}">
                 <button class="button_header">Log Out</button>
             </a>

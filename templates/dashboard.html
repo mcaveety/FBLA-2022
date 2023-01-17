@@ -6,9 +6,13 @@
 
 <!-- Picks up where base.html left off -->
 {% block content %}
-
-<h3>{{ user_data['first_name'] }} {{ user_data['last_name'] }}</h3>
-<h4>Student Number: {{ user_data['student_number'] }}</h4>
-<h4>Grade Level: {{ user_data['grade_level'] }}</h4>
-
+<div class="center">
+    <h1>{{ user_data['first_name'] }} {{ user_data['last_name'] }}</h1>
+    <h2>Student Number: {{ user_data['student_number'] }}</h2>
+    <h2>Grade Level: {{ user_data['grade_level'] }}</h2>
+    <h2>Events attended this quarter: {{ user_data['num_attended'] }}</h2>
+    <h2>Points: {{ user_data['points'] }}</h2>
+    <h2>Credits: {{ user_data['credits'] }}</h2>
+    <h3>Click on the navigation buttons above to start earning points for your events!</h3>
+</div>
 {% endblock %}

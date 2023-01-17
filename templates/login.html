@@ -6,31 +6,33 @@
 
 <!-- Picks up where base.html left off -->
 {% block content %}
+<div class="center">
+    <h1>Login</h1>
 
-<p>Login</p>
+        <form name="login" method="post">
+            <input type="number" id="student_number_login" name="student_number" placeholder="Student Number" required>
+            <input type="submit" name="btn" value="Login">
+        </form>
 
-    <form name="login" method="post">
-        <input type="number" id="student_number_login" name="student_number" placeholder="Student Number" required>
-        <input type="submit" name="btn" value="Login">
+    <h3 class="error_display">{{ error_login }}</h3>
+
+    <h1>Sign Up</h1>
+
+    <form name="sign_up" method="post">
+        <div style="align-items: center">
+            <input id="first_name" name="first_name" type="text" placeholder="First Name" required>
+            <input id="last_name" name="last_name" type="text" placeholder="Last Name" required>
+            <input id="student_number" name="student_number" type="number" placeholder="Student Number" required>
+            <select id="grade_level" name="grade_level">
+                <option value="9">Freshman (9th grade)</option>
+                <option value="10">Sophomore (10th grade)</option>
+                <option value="11">Junior (11th grade)</option>
+                <option value="12">Senior (12th grade)</option>
+            </select>
+            <input type="submit" name="btn" value="Sign Up">
+        </div>
     </form>
 
-<h3 class="error_display">{{ error_login }}</h3>
-
-<p>Sign Up</p>
-
-<form name="sign_up" method="post">
-    <input id="first_name" name="first_name" type="text" placeholder="First Name" required>
-    <input id="last_name" name="last_name" type="text" placeholder="Last Name" required>
-    <input id="student_number" name="student_number" type="number" placeholder="Student Number" required>
-    <select id="grade_level" name="grade_level">
-        <option value="9">Freshman (9th grade)</option>
-        <option value="10">Sophomore (10th grade)</option>
-        <option value="11">Junior (11th grade)</option>
-        <option value="12">Senior (12th grade)</option>
-    </select>
-    <input type="submit" name="btn" value="Sign Up">
-</form>
-
-<h3 class="error_display">{{ error_sign_up }}</h3>
-
+    <h3 class="error_display">{{ error_sign_up }}</h3>
+</div>
 {% endblock %}

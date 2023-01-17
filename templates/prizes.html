@@ -7,29 +7,35 @@
 <!-- Picks up where base.html left off -->
 {% block content %}
 
-<h2>Prizes</h2>
+<div class="center">
+    <h1>Prizes</h1>
 
-<h4>Your credits: {{ session['credits'] }}</h4>
+    <h2>Your credits: <b>{{ session['credits'] }}</b></h2>
 
-<h4>{{ message }}</h4>
-<h4 class="error_display">{{ error }}</h4>
+    <h3 class="message_display">{{ message }}</h3>
+    <h3 class="error_display">{{ error }}</h3>
+</div>
 
-<form method="post">
+<div class="center_div" style="align-items: center">
+    <form method="post">
 
-    {% for prize in prizes %}
-    <div>
-        <img src="{{ prize['img_url'] }}">
-        {{ prize['name'] }}<br>
-        {{ prize['desc'] }}<br>
-        Type: {{ prize['type'] }}<br>
-        <label>
-            <input type="radio" name="prize_select" value="{{ prize['credits'] }}">
-                Credits: {{ prize['credits'] }}<br>
-        </label>
-    </div>
-    {% endfor %}
-        <input type="submit" name="btn">
+        {% for prize in prizes %}
+        <div class="prize_item center">
+            <img src="{{ prize['img_url'] }}">
+            <h3>{{ prize['name'] }}</h3>
+            {{ prize['desc'] }}<br>
+            Type: {{ prize['type'] }}<br>
+            <label>
+                <input type="radio" name="prize_select" value="{{ prize['credits'] }}">
+                    Credits: {{ prize['credits'] }}<br>
+            </label>
+        </div>
+        {% endfor %}
 
-</form>
+        <div class="center">
+            <input type="submit" name="btn">
+        </div>
+    </form>
+</div>
 
 {% endblock %}

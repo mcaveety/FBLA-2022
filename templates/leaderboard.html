@@ -6,8 +6,17 @@
 
 <!-- Picks up where base.html left off -->
 {% block content %}
-<div>
+<h1 class="center">Student Leaderboard</h1>
+<h2 class="center">View current student rankings, past leaderboards and archive current student leaderboard.</h2>
+<div class="center">
     <table class="center_div">
+
+        <colgroup>
+            <col span="1" style="width: 15%">
+            <col span="1" style="width: 35%">
+            <col span="1" style="width: 20%">
+            <col span="4" style="width: 10%">
+        </colgroup>
 
         <tr>
             <th>Position</th>
@@ -36,10 +45,10 @@
     </table>
 </div>
 
-<div class="center_div" style="display: block">
+<div class="center">
 <form name="archive" method="post">
 
-    <input type="submit" name="btn" value="Archive">
+    <input type="submit" name="btn" value="Archive Current Quarter">
 
 </form>
 

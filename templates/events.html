@@ -7,18 +7,20 @@
 <!-- Picks up where base.html left off -->
 {% block content %}
 
-<h2>Events & activities</h2>
+<h1 class="center">Events & activities</h1>
 
+<h2 class="center">Click on any event to submit your attendance for points!</h2>
+
+<div class="center_div events_div">
 {% for event in events_data %}
-
-<a href="{{ url_for('events_page', num=event['num']) }}">
-    <button>
-        {{ event['name'] }}<br>
-        Type: {{ event['type'] }}<br>
-        Date: {{ event['date'] }}<br>
-    </button>
-</a>
-
+    <a href="{{ url_for('events_page', num=event['num']) }}">
+        <button style="width: 300px">
+            <h3>{{ event['name'] }}</h3>
+            <p>{{ event['type'] }}<br>
+            {{ event['date'] }}</p>
+        </button>
+    </a>
 {% endfor %}
+</div>
 
 {% endblock %}
