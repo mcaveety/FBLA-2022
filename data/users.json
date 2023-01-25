@@ -1,0 +1,170 @@
+ [
+    {
+        "first_name": "Tyler",
+        "last_name": "Joseph",
+        "student_number": "2121212",
+        "grade_level": "9",
+        "points": 125,
+        "credits": 0,
+        "num_attended": 2,
+        "events_attended": [
+            10,
+            1
+        ]
+    },
+    {
+        "first_name": "Ethan",
+        "last_name": "Nestor",
+        "student_number": "2845372",
+        "grade_level": "11",
+        "points": 175,
+        "credits": 0,
+        "num_attended": 3,
+        "events_attended": [
+            15,
+            12,
+            5
+        ]
+    },
+    {
+        "first_name": "James",
+        "last_name": "Burnett",
+        "student_number": "8364926",
+        "grade_level": "12",
+        "points": 100,
+        "credits": 0,
+        "num_attended": 2,
+        "events_attended": [
+            6,
+            8
+        ]
+    },
+    {
+        "first_name": "Josh",
+        "last_name": "Dun",
+        "student_number": "1212121",
+        "grade_level": "9",
+        "points": 400,
+        "credits": 0,
+        "num_attended": 7,
+        "events_attended": [
+            14,
+            1,
+            10,
+            4,
+            7,
+            3,
+            13
+        ]
+    },
+    {
+        "first_name": "Oli",
+        "last_name": "Sykes",
+        "student_number": "7483927",
+        "grade_level": "9",
+        "points": 275,
+        "credits": 0,
+        "num_attended": 5,
+        "events_attended": [
+            9,
+            4,
+            2,
+            6,
+            1
+        ]
+    },
+    {
+        "first_name": "Michelle",
+        "last_name": "McAveety",
+        "student_number": "7384629",
+        "grade_level": "10",
+        "points": 200,
+        "credits": 0,
+        "num_attended": 3,
+        "events_attended": [
+            9,
+            11,
+            8
+        ]
+    },
+    {
+        "first_name": "Dan",
+        "last_name": "Reynolds",
+        "student_number": "8293640",
+        "grade_level": "10",
+        "points": 50,
+        "credits": 0,
+        "num_attended": 1,
+        "events_attended": [
+            5
+        ]
+    },
+    {
+        "first_name": "Ben",
+        "last_name": "McKee",
+        "student_number": "2956403",
+        "grade_level": "11",
+        "points": 125,
+        "credits": 0,
+        "num_attended": 2,
+        "events_attended": [
+            10,
+            2
+        ]
+    },
+    {
+        "first_name": "Daniel",
+        "last_name": "Platzman",
+        "student_number": "8539621",
+        "grade_level": "11",
+        "points": 175,
+        "credits": 0,
+        "num_attended": 3,
+        "events_attended": [
+            12,
+            1,
+            14
+        ]
+    },
+    {
+        "first_name": "Wayne",
+        "last_name": "Sermon",
+        "student_number": "3718401",
+        "grade_level": "12",
+        "points": 100,
+        "credits": 0,
+        "num_attended": 2,
+        "events_attended": [
+            0,
+            4
+        ]
+    },
+    {
+        "first_name": "Dallon",
+        "last_name": "Weekes",
+        "student_number": "8264930",
+        "grade_level": "10",
+        "points": 225,
+        "credits": 0,
+        "num_attended": 3,
+        "events_attended": [
+            13,
+            10,
+            2
+        ]
+    },
+    {
+        "first_name": "Dave",
+        "last_name": "Bayley",
+        "student_number": "1859230",
+        "grade_level": "12",
+        "points": 250,
+        "credits": 0,
+        "num_attended": 3,
+        "events_attended": [
+            6,
+            12,
+            13
+        ]
+    }
+]
