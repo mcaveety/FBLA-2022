@@ -106,7 +106,7 @@ def leaderboard_page():
                 session[key] = user_info[key]
 
         elif request.form['btn'] == "Select":
-            file_path = request.form.get('select_qy')
+            file_path = users.resource_path(request.form.get('select_qy'))
 
     users_data = users.sort_leaderboard(file_path=file_path)
     qy_list = list(archive.collect_paths())

@@ -101,7 +101,7 @@ def update_toc(file_path=archive_toc_path):
 	with open(file_path, 'w') as file:
 		json.dump(toc, file, indent=4)
 
-	return archive_new_path
+	return users.resource_path(archive_new_path)
 
 
 def collect_paths(file_path=archive_toc_path):
