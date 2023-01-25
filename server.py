@@ -14,14 +14,13 @@ import users
 # Allows environment variables to be accessed
 load_dotenv()
 
-
 # An instance of the Flask class is created
 app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 Session(app)
-port = 8080
+port = 5000
 
 
 # Check if user is logged in for pages requiring a logged-in account
@@ -221,4 +220,5 @@ def page_not_found(e):
 
 # Flask app is run, allowing access of the webpage at localhost:8080 in a web browser
 
-app.run(host="localhost", port=port)
+if __name__ == "__main__":
+    app.run(host="localhost", port=port)
